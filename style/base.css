@@ -1,0 +1,237 @@
+﻿@font-face {
+    font-family: 'Mj flow';
+    src: url('../fonts/Mj flow.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Mostwasted';
+    src: url('../fonts/most-wasted/Mostwasted.ttf') format('truetype');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(217,6,0);
+    background-image: url('../pic/new-material-design.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 260px,100% 240px;
+    background-size: 400px;
+    background-attachment: fixed;
+}
+
+#title {
+    position: fixed;
+    top: 68px;
+    left: 60px;
+    width: 329px;
+    height: 220px;
+    font-family: Mostwasted;
+    font-size: 90px;
+    z-index:-100;
+}
+
+.fix {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.715);
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+    .fix > .menu:hover {
+        transition: 0.3s;
+        cursor: pointer;
+        color: red;
+    }
+
+    .fix > .menu {
+        transition: 0.3s;
+        //border-bottom: 1px solid #ddd;
+        height: 60px;
+        font-family: 'Segoe UI';
+        font-size: 23px;
+        line-height: 53px;
+        margin-bottom: 10px;
+    }
+
+        .fix > .menu:nth-child(5) {
+            margin-bottom: 50px;
+        }
+
+    .fix > .icon:hover {
+        cursor: pointer;
+        transition: 0.3s;
+        transform: scale(1.2);
+    }
+
+    .fix > .icon {
+        transition: 0.3s;
+        border-bottom: 1px solid #ddd;
+        height: 80px;
+        background-size: 60px;
+        background-repeat: no-repeat;
+        background-position: 50% center;
+        border: 0 none;
+    }
+
+    .fix > .ic1 {
+        background-image: url('../pic/1200px-ITunes_logo.svg.png');
+    }
+
+    .fix > .ic2 {
+        background-image: url('../pic/deezer-logo-circle.png');
+    }
+
+    .fix > .ic3 {
+        background-image: url('../pic/main.png');
+    }
+
+    .fix > .ic4 {
+        background-image: url('../pic/unnamed.png');
+    }
+
+    .fix > .ic5 {
+        background-image: url('../pic/nexus2cee_iheart-radio-round-icon.png');
+    }
+
+#head {
+    width: 350px;
+    margin: 70px auto 60px auto;
+    font-family: 'Segoe UI';
+    font-size: 39px;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    background: rgba(30, 30, 30, 0.715);
+    border-radius: 6px;
+    line-height: 50px;
+    height: 60px;
+}
+
+#all {
+    border-radius: 6px;
+    margin: 0 auto 0 auto;
+    width: 1152px;
+    text-align: center;
+    padding: 20px 20px;
+    padding-right: 20px;
+    background: rgba(30, 30, 30, 0.608);
+    overflow: hidden;
+}
+
+    #all > .items:hover {
+        transition: 0.3s;
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.708);
+        transform: translateY(-15px);
+    }
+
+    #all > .items {
+        transition: 0.3s;
+        /*overflow: hidden;
+    background:rgb(128, 128, 128);*/
+        width: 172px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.708);
+        /*border: 1px solid rgba(62, 155, 203, 0.96);*/
+        margin: 10px;
+        /*width: 150px;*/
+        padding: 4px 0 10px 0;
+        float: right;
+    }
+
+        #all > .items:hover > img {
+            transition: 0.3s;
+            border-radius: 6px;
+            opacity: 1;
+        }
+
+        #all > .items > img {
+            opacity: 0.9;
+            display: inline-block;
+            margin: auto;
+            transition: 0.3s;
+            width: 164px;
+            border: 0.001px solid rgba(255, 255, 255, 0);
+            border-radius: 50%;
+        }
+
+        #all > .items > h2 {
+            height: 28px;
+            background: rgba(255, 0, 0, 0.608);
+            color: #fff;
+            font-family: Segoe UI;
+            font-size: 21px;
+            margin: 5px auto 5px;
+            line-height: 22px;
+            font-weight: normal;
+            width: 95%;
+            border-radius: 6px;
+        }
+
+        #all > .items:hover > a {
+            color: white;
+            transition: 0.3s;
+            /*border-bottom: 2px solid black;*/
+        }
+
+        #all > .items > a {
+            display: inline-block;
+            margin-top: 5px;
+            transition: 0.3s;
+            text-decoration: none;
+            font-family: Segoe UI;
+            font-size: 20px;
+            color: black;
+        }
+
+        #all > .items:hover > .price {
+            color: white;
+            transition: 0.3s;
+            /*border-bottom: 2px solid black;*/
+        }
+
+        #all > .items > .price {
+            transition: 0.3s;
+            display: inline-block;
+            height: 25px;
+            font-size: 20px;
+            margin-top: 5px;
+        }
+
+/*=======================================================*/
+
+@media screen and (max-width:1500px) {
+    #all{
+        width:965px;
+    }
+}
+
+@media screen and (max-width:1300px) {
+    #all{
+        width:770px;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    #all{
+        width:580px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    #all{
+        width:385px;
+    }
+}
+
+@media screen and (max-width:660px) {
+    #all{
+        width:190px;
+    }
+}

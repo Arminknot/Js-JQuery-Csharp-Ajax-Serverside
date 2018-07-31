@@ -52,12 +52,16 @@ public partial class script_index : System.Web.UI.Page
             HtmlGenericControl it = new HtmlGenericControl("div");
             it.Attributes["class"] = "items";
 
+            HtmlGenericControl nam = new HtmlGenericControl("div");
+            nam.Attributes["class"] = "language";
+            nam.Style["background"] = "purple";
+            nam.InnerHtml = "C#";
+
             HtmlImage im = new HtmlImage();
             im.Src = "pic/" + archive[i].pic;
 
             HtmlGenericControl h = new HtmlGenericControl("h2");
             h.InnerHtml = archive[i].artist;
-            h.Style["background"] = "purple";
 
             HtmlAnchor anc = new HtmlAnchor();
             anc.HRef = "#";
@@ -67,6 +71,7 @@ public partial class script_index : System.Web.UI.Page
             caca.Attributes["class"] = "price";
             caca.InnerHtml = "Price: " + archive[i].price + " $";
 
+            it.Controls.Add(nam);
             it.Controls.Add(im);
             it.Controls.Add(h);
             it.Controls.Add(anc);

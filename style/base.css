@@ -3,7 +3,6 @@
     src: url('../fonts/Mj flow.ttf') format('truetype');
 }
 
-
 @font-face {
     font-family: 'Mostwasted';
     src: url('../fonts/most-wasted/Mostwasted.ttf') format('truetype');
@@ -12,10 +11,10 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: rgb(217,6,0);
+    background-color: rgb(217, 6, 0);
     background-image: url('../pic/new-material-design.jpg');
     background-repeat: no-repeat;
-    background-position: 0 260px,100% 240px;
+    background-position: 0 260px, 100% 240px;
     background-size: 400px;
     background-attachment: fixed;
 }
@@ -28,7 +27,7 @@ body {
     height: 220px;
     font-family: Mostwasted;
     font-size: 90px;
-    z-index:-100;
+    z-index: -100;
 }
 
 .fix {
@@ -51,7 +50,7 @@ body {
 
     .fix > .menu {
         transition: 0.3s;
-        //border-bottom: 1px solid #ddd;
+        /*border-bottom: 1px solid #ddd;*/
         height: 60px;
         font-family: 'Segoe UI';
         font-size: 23px;
@@ -115,7 +114,7 @@ body {
 
 #all {
     border-radius: 6px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 100px auto;
     width: 1152px;
     text-align: center;
     padding: 20px 20px;
@@ -133,8 +132,8 @@ body {
 
     #all > .items {
         transition: 0.3s;
-        /*overflow: hidden;
-    background:rgb(128, 128, 128);*/
+        overflow: hidden;
+        /*background:rgb(128, 128, 128);*/
         width: 172px;
         border-radius: 6px;
         background: rgba(255, 255, 255, 0.708);
@@ -143,7 +142,30 @@ body {
         /*width: 150px;*/
         padding: 4px 0 10px 0;
         float: right;
+        position: relative;
     }
+
+        #all > .items:hover > .language {
+            transition:0.3s;
+            transform: rotate(-45deg) translateY(-50px);
+        }
+
+        #all > .items > .language {
+            transition:0.3s;
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            top: -51px;
+            left: -51px;
+            background: brown;
+            z-index: 100;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 170px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            transform: rotate(-45deg) translateY(-9px);
+        }
 
         #all > .items:hover > img {
             transition: 0.3s;
@@ -163,7 +185,7 @@ body {
 
         #all > .items > h2 {
             height: 28px;
-            background: rgba(255, 0, 0, 0.608);
+            background: red;
             color: #fff;
             font-family: Segoe UI;
             font-size: 21px;
@@ -204,34 +226,35 @@ body {
             margin-top: 5px;
         }
 
+
 /*=======================================================*/
 
 @media screen and (max-width:1500px) {
-    #all{
-        width:965px;
+    #all {
+        width: 965px;
     }
 }
 
 @media screen and (max-width:1300px) {
-    #all{
-        width:770px;
+    #all {
+        width: 770px;
     }
 }
 
 @media screen and (max-width:1100px) {
-    #all{
-        width:580px;
+    #all {
+        width: 580px;
     }
 }
 
 @media screen and (max-width:900px) {
-    #all{
-        width:385px;
+    #all {
+        width: 385px;
     }
 }
 
 @media screen and (max-width:660px) {
-    #all{
-        width:190px;
+    #all {
+        width: 190px;
     }
 }

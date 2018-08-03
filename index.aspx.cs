@@ -20,14 +20,16 @@ public partial class script_index : System.Web.UI.Page
         public string album;
         public int price;
         public string pic;
+        public double rate;
 
 
-        public artists(string artist, string album, int price, string pic)
+        public artists(string artist, string album, int price, string pic, double rate)
         {
             this.artist = artist;
             this.album = album;
             this.price = price;
             this.pic = pic;
+            this.rate = rate;
 
         }
     }
@@ -36,12 +38,12 @@ public partial class script_index : System.Web.UI.Page
 
         List<artists> archive = new List<artists>();
 
-        archive.Add(new artists("A$AP Ferg", "Striving", 8, "7.jpg"));
-        archive.Add(new artists("Cardi B", "Invasion", 15, "8.jpg"));
-        archive.Add(new artists("Drake", "Scorpion", 16, "9.jpg"));
-        archive.Add(new artists("Wiz Khalifa", "Khalifa", 13, "10.jpg"));
-        archive.Add(new artists("Tyga", "Rawwest", 10, "11.jpg"));
-        archive.Add(new artists("G-Eazy", "The Plan", 12, "12.jpg"));
+        archive.Add(new artists("A$AP Ferg", "Striving", 8, "7.jpg",3.4));
+        archive.Add(new artists("Cardi B", "Invasion", 15, "8.jpg",4.4));
+        archive.Add(new artists("Drake", "Scorpion", 16, "9.jpg",5));
+        archive.Add(new artists("Wiz Khalifa", "Khalifa", 13, "10.jpg",4));
+        archive.Add(new artists("Tyga", "Rawwest", 10, "11.jpg",4));
+        archive.Add(new artists("G-Eazy", "The Plan", 12, "12.jpg",3.8));
 
         // all.InnerHtml = archive[4].album;
 
@@ -71,12 +73,17 @@ public partial class script_index : System.Web.UI.Page
             caca.Attributes["class"] = "price";
             caca.InnerHtml = "Price: " + archive[i].price + " $";
 
+            HtmlGenericControl st = new HtmlGenericControl("div");
+            st.Attributes["class"] = "star";
+            st.Style["width"] = archive[i].rate*25+"px";
+
             it.Controls.Add(nam);
             it.Controls.Add(im);
             it.Controls.Add(h);
             it.Controls.Add(anc);
             it.Controls.Add(caca);
- 
+            it.Controls.Add(st);
+
             all.Controls.Add(it);
         }
 

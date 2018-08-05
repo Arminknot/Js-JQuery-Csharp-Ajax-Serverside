@@ -8,36 +8,43 @@
     src: url('../fonts/most-wasted/Mostwasted.ttf') format('truetype');
 }
 
+
 /*=======================================================*/
 
 body {
     padding: 0;
     margin: 0;
     background-color: rgb(217, 6, 0);
-    background-image: url('../pic/new-material-design.jpg');
-    background-repeat: no-repeat;
-    background-position: 0 260px, 100% 240px;
-    background-size: 400px;
-    background-attachment: fixed;
 }
 
 #title {
     position: fixed;
-    top: 68px;
-    left: 20px;
+    top: 30px;
+    right: -20px;
     width: 329px;
     height: 220px;
     font-family: Mostwasted;
-    font-size: 90px;
+    font-size: 65px;
     z-index: -100;
-    text-align:center;
+    text-align: center;
 }
+
+#savage {
+    position: fixed;
+    bottom: 0;
+    right: -60px;
+    z-index: -100;
+    width: 400px;
+    height: 711px;
+    background: url('../pic/new-material-design.jpg') no-repeat;
+}
+
 
 /*=======================================================*/
 
 .fix {
     position: fixed;
-    right: 0;
+    left: 0;
     top: 0;
     width: 100px;
     height: 100%;
@@ -65,6 +72,10 @@ body {
 
         .fix > .menu:nth-child(5) {
             margin-bottom: 50px;
+        }
+
+        .fix > .menu:nth-child(1) {
+            margin-top: 10px;
         }
 
     .fix > .icon:hover {
@@ -103,12 +114,39 @@ body {
         background-image: url('../pic/nexus2cee_iheart-radio-round-icon.png');
     }
 
-    /*=======================================================*/
+    .fix > #sixitem:hover {
+        transition: 0.3s;
+        cursor: pointer;
+        color: orange;
+    }
+
+    .fix > #sixitem {
+        margin-top: 10px;
+        font-family: 'Segoe UI';
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .fix > #detailview:hover {
+        transition: 0.3s;
+        cursor: pointer;
+        color: orange;
+    }
+
+    .fix > #detailview {
+        margin-top: 10px;
+        font-family: 'Segoe UI';
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+
+/*=======================================================*/
 
 #head {
     width: 350px;
     margin: 70px auto 60px auto;
-    font-family: 'Segoe UI';
+    font-family: 'Verdana Pro';
     font-size: 39px;
     text-align: center;
     color: #fff;
@@ -122,20 +160,24 @@ body {
 #all {
     border-radius: 6px;
     margin: 0 auto 100px auto;
-    width: 1152px;
-    text-align: center;
+    width: 1320px;
     padding: 20px 20px;
     padding-right: 20px;
     background: rgba(30, 30, 30, 0.608);
     overflow: hidden;
+    position: relative;
 }
 
-/*=======================================================*/
+
+
+
+
+    /*=======================================================*/
 
     #all > .items:hover {
         transition: 0.3s;
         cursor: pointer;
-        background: rgba(50,50,250,0.6);
+        background: rgba(50, 50, 250, 0.6);
         transform: translateY(-15px);
     }
 
@@ -143,24 +185,62 @@ body {
         transition: 0.3s;
         overflow: hidden;
         /*background:rgb(128, 128, 128);*/
-        width: 172px;
+        width: 200px;
         border-radius: 6px;
         background: rgba(255, 255, 255, 0.708);
         /*border: 1px solid rgba(62, 155, 203, 0.96);*/
         margin: 10px;
         /*width: 150px;*/
         padding: 4px 0 10px 0;
-        float: right;
+        float: left;
         position: relative;
     }
 
+
+
+        #all > .items > .detail {
+            transition: 0;
+            overflow: hidden;
+            width: 0;
+            height: 0;
+            padding: 5px 10px;
+        }
+
+        #all > .items:hover > .detail > .deshead {
+            transition: 0.3s;
+            color: white;
+        }
+
+        #all > .items > .detail > .deshead {
+            transition: 0.3s;
+            height: 30px;
+            font-family: 'Segoe UI';
+            font-size: 20px;
+            border-bottom: 1px solid #aaa;
+            margin-top: 30px;
+        }
+
+        #all > .items:hover > .detail > .note {
+            transition: 0.3s;
+            color: white;
+        }
+
+        #all > .items > .detail > .note {
+            transition: 0.3s;
+            height: 240px;
+            font-family: 'Segoe UI';
+            font-size: 15px;
+            margin-top: 10px;
+        }
+
         #all > .items:hover > .language {
-            transition:0.3s;
-            transform: rotate(-45deg) translateY(-50px);
+            transition: 0.3s;
+            transform: rotate(-45deg) translateY(-55px);
         }
 
         #all > .items > .language {
-            transition:0.3s;
+            text-align: center;
+            transition: 0.3s;
             position: absolute;
             height: 100px;
             width: 100px;
@@ -174,6 +254,7 @@ body {
             font-weight: bold;
             color: #fff;
             transform: rotate(-45deg) translateY(-9px);
+            box-shadow: 0 0 10px 5px #000;
         }
 
         #all > .items:hover > img {
@@ -183,9 +264,9 @@ body {
 
         #all > .items > img {
             display: inline-block;
-            margin: auto;
+            margin: -10px 0 0 4px;
             transition: 0.3s;
-            width: 164px;
+            width: 190px;
             border: 1px solid rgba(255, 255, 255, 0);
             border-radius: 50%;
         }
@@ -199,6 +280,7 @@ body {
             margin: 5px auto 5px;
             line-height: 22px;
             font-weight: normal;
+            text-align: center;
             /*width: 95%;
             border-radius: 6px;*/
         }
@@ -210,7 +292,9 @@ body {
         }
 
         #all > .items > a {
+            text-align: center;
             display: inline-block;
+            width: 200px;
             margin-top: 5px;
             transition: 0.3s;
             text-decoration: none;
@@ -235,40 +319,43 @@ body {
 
         #all > .items > .star {
             background: url('../pic/star.png') repeat-x;
-            background-size:25px;
+            background-size: 25px;
             margin: 5px auto;
             height: 25px;
         }
 
 
-/*=======================================================*/
+    /*===============================================================*/
 
-@media screen and (max-width:1500px) {
-    #all {
-        width: 965px;
+    #all.view2 > .items {
+        transition: 0;
+        width: 420px;
     }
-}
 
-@media screen and (max-width:1300px) {
-    #all {
-        width: 770px;
-    }
-}
+        #all.view2 > .items > .detail {
+            transition: 0.3s;
+            width: 45%;
+            height: 310px;
+            float: right;
+        }
 
-@media screen and (max-width:1100px) {
-    #all {
-        width: 580px;
-    }
-}
+        #all.view2 > .items > img {
+            display: inline-block;
+            margin: 0px 0 0 4px;
+        }
 
-@media screen and (max-width:900px) {
-    #all {
-        width: 385px;
-    }
-}
+        #all.view2 > .items > h2 {
+            width: 190px;
+            margin: 5px 0 5px 4px;
+            text-align: center;
+        }
 
-@media screen and (max-width:660px) {
-    #all {
-        width: 190px;
-    }
-}
+        #all.view2 > .items > a {
+            margin: 5px 0 0 4px;
+            width: 195px;
+            text-align: center;
+        }
+
+        #all.view2 > .items > .star {
+            margin: 26px auto 0 auto;
+        }

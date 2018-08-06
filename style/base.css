@@ -17,13 +17,14 @@
     font-family: 'sanr';
     src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
 }
-/*=======================================================*/
+
+
+
 
 body {
     transition: 0.3s;
     padding: 0 0 0 50px;
     margin: 0;
-    /*background-color: rgb(217, 6, 0);*/
     background: rgb(214, 214, 214);
     background-image: url('../pic/5675404-white-background-wallpaper.png');
     background-attachment: fixed;
@@ -53,11 +54,12 @@ body {
         width: 300px;
     }
 
+
+    /*change size of left menu*/
     .fix > #switcher {
         cursor: pointer;
         height: 40px;
         width: 50px;
-        /*background: #222;*/
         position: relative;
     }
 
@@ -132,7 +134,7 @@ body {
     }
 
     .fix > .menu {
-        margin-bottom:5px;
+        margin-bottom: 5px;
         transition: 0.3s;
         border-left: 7px solid #222;
         height: 40px;
@@ -173,19 +175,20 @@ body {
             background-position: 4px center;
         }
 
+    /*grid view*/
 
     .fix > #grid {
         background-image: url('../pic/grid.png');
-        background-repeat:no-repeat;
-        background-position:10px center;
-        background-size:30px;
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        background-size: 30px;
         /*border: 1px solid red;*/
         overflow: hidden;
         position: absolute;
         bottom: 65px;
         left: 0;
         height: 45px;
-        padding:0 10px 0 50px;
+        padding: 0 10px 0 50px;
         width: 240px;
     }
 
@@ -226,9 +229,9 @@ body {
     /*search box =================================================*/
     .fix > .searchbox {
         background-image: url('../pic/serch.png');
-        background-repeat:no-repeat;
-        background-position:10px center;
-        background-size:30px;
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        background-size: 30px;
         position: absolute;
         bottom: 5px;
         left: 0;
@@ -246,14 +249,9 @@ body {
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
-            /*class ="support css-property">;*/
             width: 230px;
             height: 42px;
             cursor: pointer;
-            /*top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;*/
             overflow: hidden;
             border: none;
             -webkit-border-radius: 21px;
@@ -302,7 +300,6 @@ body {
     list-style: none;
     height: 30px;
     width: 1340px;
-    /*border: 1px solid red;*/
 }
 
     #nav > .set {
@@ -401,7 +398,7 @@ body {
     background-image: url('../pic/left.png');
 }
 
-/*///====================================================*/
+/*///======================select option==============================*/
 
 #nav > #select {
     float: right;
@@ -411,8 +408,10 @@ body {
     font-family: sanr;
 }
 
+
+/*main music box=====================================*/
+
 #all {
-    /*border-radius: 6px;*/
     margin: 0 auto 50px;
     width: 1320px;
     padding: 10px;
@@ -422,7 +421,7 @@ body {
 }
 
 
-    /*=======================================================*/
+    /*===================items and childrens====================================*/
 
     #all > .items:hover {
         transition: 0.3s;
@@ -434,13 +433,9 @@ body {
     #all > .items {
         transition: 0.3s;
         overflow: hidden;
-        /*background:rgb(128, 128, 128);*/
         width: 200px;
-        /*border-radius: 6px;*/
         background: rgb(214, 214, 214);
-        /*border: 1px solid rgba(62, 155, 203, 0.96);*/
         margin: 10px;
-        /*width: 150px;*/
         padding: 4px 0 10px 0;
         float: left;
         position: relative;
@@ -529,14 +524,11 @@ body {
             line-height: 26px;
             font-weight: normal;
             text-align: center;
-            /*width: 95%;
-            border-radius: 6px;*/
         }
 
         #all > .items:hover > a {
             color: white;
             transition: 0.3s;
-            /*border-bottom: 2px solid black;*/
         }
 
         #all > .items > a {
@@ -554,7 +546,6 @@ body {
         #all > .items:hover > .price {
             color: white;
             transition: 0.3s;
-            /*border-bottom: 2px solid black;*/
         }
 
         #all > .items > .price {
@@ -573,7 +564,7 @@ body {
         }
 
 
-    /*===============================================================*/
+    /*=======================second view========================================*/
 
     #all.view2 > .items {
         transition: 0;

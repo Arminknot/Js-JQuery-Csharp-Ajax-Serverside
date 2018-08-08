@@ -15,45 +15,130 @@
 
     <!--Creatin Elements Whit jQuery =====================================================-->
 
-    <script>
+    <%--<script>
 
         window.onload = function () { }
 
         $(document).ready(function () {
 
-            for (i = 0; i < artists1.length; i++) {
-
-                it = $("<div>").addClass("items");
-
-                des = $("<div>").addClass("detail");
-
-                head = $("<div>").addClass("deshead").html("Description:");
-
-                note = $("<div>").addClass("note").html(artists1[i].review);
-
-                nam = $("<div>").addClass("language").html("jQ").css({ background: "green" });
-
-                im = $("<img>").attr({ src: "pic/" + artists1[i].pic });
-
-                h = $("<h2>").html(artists1[i].artist);
-
-                anc = $("<a>").html("Album: " + artists1[i].album);
-
-                pipi = $("<a>").addClass("price").html("Price: " + artists1[i].price);
-
-                st = $("<div>").addClass("star").css({ width: (25 * artists1[i].rate)-2 + "px" });
-
-                it.append(des).append(nam).append(im).append(h).append(anc).append(pipi).append(st);
-
-                des.append(head).append(note);
-
-                $("#all").append(it);
-            }
+            
 
         });
 
-    </script>
+    </script>--%>
 
+    <script>
+
+        fo = [];
+        v = "v1";
+
+
+        $(document).ready(function () {
+
+            createtab(6);
+            fill_items(0, 6);
+
+            $("#select").change(function () {
+
+                itemnumber = $("#select>option:selected").html();
+                createtab(itemnumber);
+
+                fill_items(0, itemnumber);//change item according to select view
+            })
+
+
+            $("#nav").on("click", "div", function () {
+
+                $("#nav>div").removeClass();
+                $(this).addClass("set");
+                $("#nav>div:first-child").addClass("left");
+                $("#nav>div:last-child").addClass("right");
+
+                page = $(this).html();
+                itemnumber = $("#select>option:selected").html();
+
+                start = (page - 1) * itemnumber;
+                fill_items(start, itemnumber);
+            });
+        })
+
+
+        function createtab(psize) {
+            $.ajax({
+                url: "index.aspx/getSize",
+                data: {},
+                dataType: "json",
+                contentType: "application/json",
+                type: "post",
+                success: function (response) {
+
+                    wsize = response.d;
+                    num = Math.ceil(wsize / psize);
+
+                    $("#nav").empty();
+                    // Building tabs
+                    l = $("<div>").addClass("left");
+                    r = $("<div>").addClass("right");
+
+                    $("#nav").append(l);
+
+                    for (i = 0; i < num; i++) {
+                        tab = $("<div>").html(i + 1);
+                        $("#nav").append(tab);
+                    }
+
+                    $("#nav").append(r); //right button must be last append
+
+                    $("#nav>div:eq(1)").addClass("set");
+
+                },
+                error: function () { },
+
+            });
+        }
+
+
+
+
+        //fill all items in page==================
+        function fill_items(start, count) {
+            $.ajax({
+                url: "index.aspx/getAll",
+                data: "{st:" + start + ",cu:" + count + "}",
+                dataType: "json",
+                contentType: "application/json",
+                type: "post",
+                success: function (response) {
+                    fo = response.d;
+
+                    $("#all").empty();
+
+                    for (i = 0; i < fo.length; i++) {
+
+                        it = $("<div>").addClass("items");
+                        des = $("<div>").addClass("detail");
+                        head = $("<div>").addClass("deshead").html("Description:");
+                        note = $("<div>").addClass("note").html(fo[i].review);
+                        nam = $("<div>").addClass("language").html("jQ").css({ background: "green" });
+                        im = $("<img>").attr({ src: "pic/" + fo[i].pic });
+                        h = $("<h2>").html(fo[i].artist);
+                        anc = $("<a>").html("Album: " + fo[i].album);
+                        pipi = $("<a>").addClass("price").html("Price: " + fo[i].price);
+                        st = $("<div>").addClass("star").css({ width: (25 * fo[i].rate) - 2 + "px" });
+
+                        it.append(des).append(nam).append(im).append(h).append(anc).append(pipi).append(st);
+                        des.append(head).append(note);
+
+                        $("#all").append(it);
+                    }
+
+                },
+                error: function () { }
+
+            });
+        }
+
+    </script>
 
 </head>
 
@@ -126,24 +211,24 @@
 
         <!--Page Changer-->
 
-        <div id="left"></div>
+        <%--<div class="left"></div>
         <div class="set">1</div>
         <div>2</div>
         <div>3</div>
-        <div id="right"></div>
+        <div class="right"></div>--%>
 
         <!--Grid Count Options-->
-
-        <select id="select">
-
-            <option selected>View Count</option>
-            <option>6</option>
-            <option>12</option>
-            <option>18</option>
-
-        </select>
-
     </div>
+
+    <select id="select">
+
+        <option selected>6</option>
+        <option>12</option>
+        <option>18</option>
+
+    </select>
+
+
 
 
     <!--Main Music Box ====================!!!!!!!!!!!!!!!!!!!!!!!!!!!!--------->
@@ -162,47 +247,47 @@
 
 <script>
 
-        function openmenu() {
+    function openmenu() {
         if (tt == 0) {
             switcher();
         }
     }
 
 
-        //==============switch view botton=================================
-        function detailview() {
-            all.className = "view2";
-            $("#detailview").css({ color: "#534fe2" });
-            $("#sixitem").css({ color: "" });
+    //==============switch view botton=================================
+    function detailview() {
+        all.className = "view2";
+        $("#detailview").css({ color: "#534fe2" });
+        $("#sixitem").css({ color: "" });
+    }
+
+    function normalview() {
+        all.className = all.className.replace("view2", "");
+        $("#detailview").css({ color: "" });
+        $("#sixitem").css({ color: "#534fe2" });
+    }
+
+    //switch left tab=================================================
+
+    tt = 0;
+    function switcher() {
+
+        if (tt == 0) {
+            $("#fixing").addClass("fixed");
+            $("#topi").addClass("open");
+            $("#downi").addClass("open");
+            $("body").css({ padding: "0 0 0 300px" });
+            tt = 1;
+        } else {
+            $("#fixing").removeClass("fixed");
+            $("#topi").removeClass("open");
+            $("#downi").removeClass("open");
+            $("body").css({ padding: "0 0 0 50px" });
+            tt = 0;
         }
+    }
 
-        function normalview() {
-            all.className = all.className.replace("view2", "");
-            $("#detailview").css({ color: "" });
-            $("#sixitem").css({ color: "#534fe2" });
-        }
 
-        //switch left tab=================================================
-
-        tt = 0;
-        function switcher() {
-
-            if (tt == 0) {
-                $("#fixing").addClass("fixed");
-                $("#topi").addClass("open");
-                $("#downi").addClass("open");
-                $("body").css({ padding: "0 0 0 300px" });
-                tt = 1;
-            } else {
-                $("#fixing").removeClass("fixed");
-                $("#topi").removeClass("open");
-                $("#downi").removeClass("open");
-                $("body").css({ padding: "0 0 0 50px" });
-                tt = 0;
-            }
-        }
-
-    
 
 </script>
 

@@ -368,7 +368,7 @@ body {
         line-height: 30px;
     }
 
-    #nav > #right, #nav > #left {
+    #nav > .right, #nav > .left {
         width: 30px;
         background-size: 18px;
         background-position: center center;
@@ -377,7 +377,7 @@ body {
 
         /*///========================================right botton animation============*/
 
-        #nav > #right:hover {
+        #nav > .right:hover {
             background-image: url('../pic/rightb.png');
             animation: rightanim 0.6s infinite;
         }
@@ -405,13 +405,13 @@ body {
 }
 
 
-#nav > #right {
+#nav > .right {
     background-image: url('../pic/right.png');
 }
 
 /*///========================================left botton animation============*/
 
-#nav > #left:hover {
+#nav > .left:hover {
     background-image: url('../pic/leftb.png');
     animation: leftanim 0.6s infinite;
 }
@@ -438,16 +438,18 @@ body {
     }
 }
 
-#nav > #left {
+#nav > .left {
     background-image: url('../pic/left.png');
 }
 
 /*///======================select option==============================*/
 
-#nav > #select {
-    float: right;
+#select {
+    position:absolute;
     width: 100px;
-    height: 100%;
+    height: 30px;
+    top:5px;
+    right:5px;
     text-align: center;
     font-family: sanr;
 }

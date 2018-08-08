@@ -26,8 +26,6 @@ body {
     padding: 0 0 0 50px;
     margin: 0;
     background: rgb(214, 214, 214);
-    background-image: url('../pic/5675404-white-background-wallpaper.png');
-    background-attachment: fixed;
 }
 
 
@@ -66,8 +64,8 @@ body {
         .fix > #switcher > .mainarrow {
             position: absolute;
             top: 17px;
-            left: 5px;
-            width: 36px;
+            left: 11px;
+            width: 27px;
             height: 4px;
             border-radius: 10px;
             background: rgb(83, 79, 226);
@@ -106,7 +104,7 @@ body {
                 border-radius: 10px;
                 background: rgb(83, 79, 226);
                 position: absolute;
-                right: 23px;
+                right: 14px;
                 width: 15px;
                 transform: rotate(-45deg);
                 top: -4px;
@@ -118,7 +116,7 @@ body {
                 border-radius: 10px;
                 background: rgb(83, 79, 226);
                 position: absolute;
-                right: 23px;
+                right: 14px;
                 width: 15px;
                 transform: rotate(45deg);
                 top: 4px;
@@ -177,7 +175,14 @@ body {
 
     /*grid view*/
 
+    .fix > #grid:hover {
+        transition: 0.3s;
+        cursor: pointer;
+        background-position: 10px -40px;
+    }
+
     .fix > #grid {
+        transition: 0.3s;
         background-image: url('../pic/grid.png');
         background-repeat: no-repeat;
         background-position: 10px center;
@@ -190,8 +195,25 @@ body {
         height: 45px;
         padding: 0 10px 0 50px;
         width: 240px;
+        line-height: 13px;
     }
 
+        .fix > #grid:hover > .text {
+            transition: 0.3s;
+            line-height: 44px;
+        }
+
+        .fix > #grid > .text {
+            transition: 0.3s;
+            font-family: sanb;
+            font-size: 14px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 40px;
+            width: 50px;
+            line-height: 130px;
+        }
 
         .fix > #grid > #sixitem:hover {
             transition: 0.3s;
@@ -203,9 +225,8 @@ body {
             overflow: hidden;
             width: 40%;
             float: left;
-            font-family: 'sanr';
+            font-family: 'sanb';
             font-size: 14px;
-            font-weight: bold;
             line-height: 46px;
         }
 
@@ -219,15 +240,22 @@ body {
             overflow: hidden;
             width: 40%;
             float: right;
-            font-family: 'sanr';
+            font-family: 'sanb';
             font-size: 14px;
-            font-weight: bold;
             line-height: 46px;
         }
 
 
     /*search box =================================================*/
+
+    .fix > .searchbox:hover {
+        transition: 0.3s;
+        cursor: pointer;
+        background-position: 10px -40px;
+    }
+
     .fix > .searchbox {
+        transition: 0.3s;
         background-image: url('../pic/serch.png');
         background-repeat: no-repeat;
         background-position: 10px center;
@@ -240,6 +268,22 @@ body {
         width: 230px;
     }
 
+        .fix > .searchbox:hover > .look {
+            transition: 0.3s;
+            line-height: 44px;
+        }
+
+        .fix > .searchbox > .look {
+            transition: 0.3s;
+            font-family: sanb;
+            font-size: 14px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 40px;
+            width: 50px;
+            line-height: 130px;
+        }
         .fix > .searchbox > .button {
             position: absolute;
             top: 0;

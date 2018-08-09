@@ -445,11 +445,9 @@ body {
 /*///======================select option==============================*/
 
 #select {
-    position:absolute;
+    float:right;
     width: 100px;
     height: 30px;
-    top:5px;
-    right:5px;
     text-align: center;
     font-family: sanr;
 }
@@ -556,6 +554,7 @@ body {
             margin: -10px 0 0 4px;
             transition: 0.3s;
             width: 190px;
+            height: 190px;
             border: 1px solid rgba(255, 255, 255, 0);
             border-radius: 50%;
         }
@@ -585,7 +584,7 @@ body {
             transition: 0.3s;
             text-decoration: none;
             font-family: sanr;
-            font-size: 20px;
+            font-size: 16px;
             color: black;
         }
 
@@ -598,7 +597,7 @@ body {
             transition: 0.3s;
             display: inline-block;
             height: 25px;
-            font-size: 20px;
+            font-size: 16px;
             margin-top: 5px;
         }
 

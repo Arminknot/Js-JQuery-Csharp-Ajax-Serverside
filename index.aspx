@@ -51,7 +51,7 @@
 
                 $("#nav>div").removeClass();
                 $(this).addClass("set");
-                $("#nav>div:first-child").addClass("left");
+                $("#nav>div:eq(0)").addClass("left");
                 $("#nav>div:last-child").addClass("right");
 
                 page = $(this).html();
@@ -75,8 +75,7 @@
                     wsize = response.d;
                     num = Math.ceil(wsize / psize);
 
-                    $("#nav").empty();
-                    // Building tabs
+                    $("#nav>div").remove();
                     l = $("<div>").addClass("left");
                     r = $("<div>").addClass("right");
 
@@ -218,15 +217,17 @@
         <div class="right"></div>--%>
 
         <!--Grid Count Options-->
-    </div>
-
-    <select id="select">
+        <select id="select">
 
         <option selected>6</option>
         <option>12</option>
         <option>18</option>
 
     </select>
+
+    </div>
+
+    
 
 
 

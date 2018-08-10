@@ -6,7 +6,7 @@
 
 <head>
 
-    <title>HipHop Revelution</title>
+    <title>Music Revolution</title>
 
     <link href="style/base.css" rel="stylesheet" />
 
@@ -49,7 +49,7 @@
 
             $("#nav").on("click", "div", function () {
 
-                $("#nav>div").removeClass();
+                $("#nav>div").removeClass("set");
                 $(this).addClass("set");
                 $("#nav>div:eq(0)").addClass("left");
                 $("#nav>div:last-child").addClass("right");
@@ -149,6 +149,19 @@
 <body>
 
 
+    <!--add option to change main accent color-->
+
+    <div id="color">
+        <div class="pallet">
+            <div id="green" onclick="green()"></div>
+            <div id="yellow" onclick="yellow()"></div>
+            <div id="purple" onclick="purple()"></div>
+            <div id="pink" onclick="pink()"></div>
+            <div id="blue" onclick="blue()" class="border"></div>
+        </div>
+    </div>
+
+
     <!--Left Side Menu ====================-------------------------------------------->
 
 
@@ -184,7 +197,7 @@
 
             <div class="text">View</div>
 
-            <div id="sixitem" runat="server" onclick="normalview()" style="color: #534fe2">Normal View</div>
+            <div id="sixitem" runat="server" onclick="normalview()" style="color: orangered">Normal View</div>
 
             <div id="detailview" runat="server" onclick="detailview()">Show Details</div>
 
@@ -219,15 +232,15 @@
         <!--Grid Count Options-->
         <select id="select">
 
-        <option selected>6</option>
-        <option>12</option>
-        <option>18</option>
+            <option selected>6</option>
+            <option>12</option>
+            <option>18</option>
 
-    </select>
+        </select>
 
     </div>
 
-    
+
 
 
 
@@ -258,14 +271,14 @@
     //==============switch view botton=================================
     function detailview() {
         all.className = "view2";
-        $("#detailview").css({ color: "#534fe2" });
+        $("#detailview").css({ color: "orangered" });
         $("#sixitem").css({ color: "" });
     }
 
     function normalview() {
         all.className = all.className.replace("view2", "");
         $("#detailview").css({ color: "" });
-        $("#sixitem").css({ color: "#534fe2" });
+        $("#sixitem").css({ color: "orangered" });
     }
 
     //switch left tab=================================================
@@ -288,7 +301,82 @@
         }
     }
 
+    //change theme=================================================
+    $("#color>.pallet>div").click(function () {
+        $("#color>.pallet>div").removeClass();
+        $(this).addClass("border");
+    })
 
+
+    function green() {
+        $("#switcher>.mainarrow").removeClass().addClass("mainarrow").addClass("green");
+        $("#switcher>.mainarrow>.top").removeClass().addClass("top").addClass("green");
+        $("#switcher>.mainarrow>.down").removeClass().addClass("down").addClass("green");
+        $("#grid>#sixitem").removeClass().addClass("green");
+        $("#grid>#detailview").removeClass().addClass("green");
+        $("#nav>div").removeClass().addClass("green");
+        $("#nav>div:eq(0)").removeClass().addClass("left");
+        $("#nav>div:eq(1)").addClass("set");
+        $("#nav>div:last-child").removeClass().addClass("right");
+        $("#all>.items").removeClass().addClass("items").addClass("green");
+        $(".fix>.menu").removeClass().addClass("menu").addClass("green");
+    }
+
+    function yellow() {
+        $("#switcher>.mainarrow").removeClass().addClass("mainarrow").addClass("yellow");
+        $("#switcher>.mainarrow>.top").removeClass().addClass("top").addClass("yellow");
+        $("#switcher>.mainarrow>.down").removeClass().addClass("down").addClass("yellow");
+        $("#grid>#sixitem").removeClass().addClass("yellow");
+        $("#grid>#detailview").removeClass().addClass("yellow");
+        $("#nav>div").removeClass().addClass("yellow");
+        $("#nav>div:eq(0)").removeClass().addClass("left");
+        $("#nav>div:eq(1)").addClass("set");
+        $("#nav>div:last-child").removeClass().addClass("right");
+        $("#all>.items").removeClass().addClass("items").addClass("yellow");
+        $(".fix>.menu").removeClass().addClass("menu").addClass("yellow");
+    }
+
+    function purple() {
+        $("#switcher>.mainarrow").removeClass().addClass("mainarrow").addClass("purple");
+        $("#switcher>.mainarrow>.top").removeClass().addClass("top").addClass("purple");
+        $("#switcher>.mainarrow>.down").removeClass().addClass("down").addClass("purple");
+        $("#grid>#sixitem").removeClass().addClass("purple");
+        $("#grid>#detailview").removeClass().addClass("purple");
+        $("#nav>div").removeClass().addClass("purple");
+        $("#nav>div:eq(0)").removeClass().addClass("left");
+        $("#nav>div:eq(1)").addClass("set");
+        $("#nav>div:last-child").removeClass().addClass("right");
+        $("#all>.items").removeClass().addClass("items").addClass("purple");
+        $(".fix>.menu").removeClass().addClass("menu").addClass("purple");
+    }
+
+    function pink() {
+        $("#switcher>.mainarrow").removeClass().addClass("mainarrow").addClass("pink");
+        $("#switcher>.mainarrow>.top").removeClass().addClass("top").addClass("pink");
+        $("#switcher>.mainarrow>.down").removeClass().addClass("down").addClass("pink");
+        $("#grid>#sixitem").removeClass().addClass("pink");
+        $("#grid>#detailview").removeClass().addClass("pink");
+        $("#nav>div").removeClass().addClass("pink");
+        $("#nav>div:eq(0)").removeClass().addClass("left");
+        $("#nav>div:eq(1)").addClass("set");
+        $("#nav>div:last-child").removeClass().addClass("right");
+        $("#all>.items").removeClass().addClass("items").addClass("pink");
+        $(".fix>.menu").removeClass().addClass("menu").addClass("pink");
+    }
+
+    function blue() {
+        $("#switcher>.mainarrow").removeClass().addClass("mainarrow").addClass("blue");
+        $("#switcher>.mainarrow>.top").removeClass().addClass("top").addClass("blue");
+        $("#switcher>.mainarrow>.down").removeClass().addClass("down").addClass("blue");
+        $("#grid>#sixitem").removeClass().addClass("blue");
+        $("#grid>#detailview").removeClass().addClass("blue");
+        $("#nav>div").removeClass().addClass("blue");
+        $("#nav>div:eq(0)").removeClass().addClass("left");
+        $("#nav>div:eq(1)").addClass("set");
+        $("#nav>div:last-child").removeClass().addClass("right");
+        $("#all>.items").removeClass().addClass("items").addClass("blue");
+        $(".fix>.menu").removeClass().addClass("menu").addClass("blue");
+    }
 
 </script>
 

@@ -206,6 +206,7 @@ body {
 
 .fix>.menu:hover {
     transition: 0.3s;
+    color:black;
     cursor: pointer;
     background-color: #448AFF;
     border-left: 7px solid #448AFF;
@@ -216,7 +217,7 @@ body {
     transition: 0.3s;
     border-left: 7px solid #222;
     height: 40px;
-    font-family: 'sanr';
+    font-family: 'sanb';
     font-size: 18px;
     line-height: 47px;
     padding-bottom: 10px;
@@ -552,7 +553,7 @@ body {
 /*=======================================================*/
 
 #nav {
-    margin: 150px auto 50px;
+    margin: 150px auto 10px;
     padding: 0;
     list-style: none;
     height: 30px;
@@ -617,7 +618,7 @@ body {
     height: 100%;
     width: 20px;
     text-align: center;
-    font-family: sanr;
+    font-family: sanb;
     line-height: 30px;
 }
 

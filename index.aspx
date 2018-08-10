@@ -309,70 +309,75 @@
 
 
     function green() {
-        $("#switcher>.mainarrow").removeClass().addClass("mainarrow").addClass("green");
-        $("#switcher>.mainarrow>.top").removeClass().addClass("top").addClass("green");
-        $("#switcher>.mainarrow>.down").removeClass().addClass("down").addClass("green");
+        $("#switcher>.mainarrow").css({background:"#00c853"});
+        $("#switcher>.mainarrow>.top").css({background:"#00c853"});
+        $("#switcher>.mainarrow>.down").css({background:"#00c853"});
         $("#grid>#sixitem").removeClass().addClass("green");
         $("#grid>#detailview").removeClass().addClass("green");
+        adad = $("#nav>.set").html();
         $("#nav>div").removeClass().addClass("green");
         $("#nav>div:eq(0)").removeClass().addClass("left");
-        $("#nav>div:eq(1)").addClass("set");
+        $("#nav>div:eq(" + adad + ")").addClass("set");
         $("#nav>div:last-child").removeClass().addClass("right");
         $("#all>.items").removeClass().addClass("items").addClass("green");
         $(".fix>.menu").removeClass().addClass("menu").addClass("green");
     }
 
     function yellow() {
-        $("#switcher>.mainarrow").removeClass().addClass("mainarrow").addClass("yellow");
-        $("#switcher>.mainarrow>.top").removeClass().addClass("top").addClass("yellow");
-        $("#switcher>.mainarrow>.down").removeClass().addClass("down").addClass("yellow");
+        $("#switcher>.mainarrow").css({background:"#FFA726"});
+        $("#switcher>.mainarrow>.top").css({background:"#FFA726"});
+        $("#switcher>.mainarrow>.down").css({background:"#FFA726"});
         $("#grid>#sixitem").removeClass().addClass("yellow");
         $("#grid>#detailview").removeClass().addClass("yellow");
+        adad = $("#nav>.set").html();
         $("#nav>div").removeClass().addClass("yellow");
         $("#nav>div:eq(0)").removeClass().addClass("left");
-        $("#nav>div:eq(1)").addClass("set");
+        $("#nav>div:eq(" + adad + ")").addClass("set");
         $("#nav>div:last-child").removeClass().addClass("right");
         $("#all>.items").removeClass().addClass("items").addClass("yellow");
         $(".fix>.menu").removeClass().addClass("menu").addClass("yellow");
     }
 
     function purple() {
-        $("#switcher>.mainarrow").removeClass().addClass("mainarrow").addClass("purple");
-        $("#switcher>.mainarrow>.top").removeClass().addClass("top").addClass("purple");
-        $("#switcher>.mainarrow>.down").removeClass().addClass("down").addClass("purple");
+        $("#switcher>.mainarrow").css({background:"#AB47AC"});
+        $("#switcher>.mainarrow>.top").css({background:"#AB47AC"});
+        $("#switcher>.mainarrow>.down").css({background:"#AB47AC"});
         $("#grid>#sixitem").removeClass().addClass("purple");
         $("#grid>#detailview").removeClass().addClass("purple");
+        adad = $("#nav>.set").html();
         $("#nav>div").removeClass().addClass("purple");
         $("#nav>div:eq(0)").removeClass().addClass("left");
-        $("#nav>div:eq(1)").addClass("set");
+        $("#nav>div:eq(" + adad + ")").addClass("set");
         $("#nav>div:last-child").removeClass().addClass("right");
         $("#all>.items").removeClass().addClass("items").addClass("purple");
         $(".fix>.menu").removeClass().addClass("menu").addClass("purple");
     }
 
     function pink() {
-        $("#switcher>.mainarrow").removeClass().addClass("mainarrow").addClass("pink");
-        $("#switcher>.mainarrow>.top").removeClass().addClass("top").addClass("pink");
-        $("#switcher>.mainarrow>.down").removeClass().addClass("down").addClass("pink");
+        $("#switcher>.mainarrow").css({background:"#EC407A"});
+        $("#switcher>.mainarrow>.top").css({background:"#EC407A"});
+        $("#switcher>.mainarrow>.down").css({background:"#EC407A"});
         $("#grid>#sixitem").removeClass().addClass("pink");
         $("#grid>#detailview").removeClass().addClass("pink");
+        adad = $("#nav>.set").html();
         $("#nav>div").removeClass().addClass("pink");
         $("#nav>div:eq(0)").removeClass().addClass("left");
-        $("#nav>div:eq(1)").addClass("set");
+        $("#nav>div:eq(" + adad + ")").addClass("set");
         $("#nav>div:last-child").removeClass().addClass("right");
         $("#all>.items").removeClass().addClass("items").addClass("pink");
         $(".fix>.menu").removeClass().addClass("menu").addClass("pink");
     }
 
     function blue() {
-        $("#switcher>.mainarrow").removeClass().addClass("mainarrow").addClass("blue");
-        $("#switcher>.mainarrow>.top").removeClass().addClass("top").addClass("blue");
-        $("#switcher>.mainarrow>.down").removeClass().addClass("down").addClass("blue");
+        $("#switcher>.mainarrow").css({background:"#448AFF"});
+        $("#switcher>.mainarrow>.top").css({background:"#448AFF"});
+        $("#switcher>.mainarrow>.down").css({background:"#448AFF"});
         $("#grid>#sixitem").removeClass().addClass("blue");
         $("#grid>#detailview").removeClass().addClass("blue");
+        adad = $("#nav>.set").html();
         $("#nav>div").removeClass().addClass("blue");
         $("#nav>div:eq(0)").removeClass().addClass("left");
-        $("#nav>div:eq(1)").addClass("set");
+        $("#nav>div:eq(" + adad + ")").addClass("set");
         $("#nav>div:last-child").removeClass().addClass("right");
         $("#all>.items").removeClass().addClass("items").addClass("blue");
         $(".fix>.menu").removeClass().addClass("menu").addClass("blue");

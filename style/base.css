@@ -25,6 +25,21 @@ body {
     background: rgb(214, 214, 214);
 }
 
+/*==========================scroll css=============================*/
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
 
 /*=======================================================*/
 
@@ -42,419 +57,420 @@ body {
     text-align: center;
 }
 
-.fix.fixed {
-    transition: 0.3s;
-    width: 300px;
-}
-
-
-/*change size of left menu*/
-
-.fix>#switcher {
-    cursor: pointer;
-    height: 40px;
-    width: 50px;
-    position: relative;
-}
-
-.fix>#switcher>.mainarrow {
-    position: absolute;
-    top: 17px;
-    left: 11px;
-    width: 27px;
-    height: 4px;
-    border-radius: 10px;
-    background: #448AFF;
-}
-
-.fix>#switcher>.mainarrow.green {
-    background: #00c853;
-}
-
-.fix>#switcher>.mainarrow.yellow {
-    background: #FFA726;
-}
-
-.fix>#switcher>.mainarrow.purple {
-    background: #AB47AC;
-}
-
-.fix>#switcher>.mainarrow.pink {
-    background: #EC407A;
-}
-
-.fix>#switcher>.mainarrow.blue {
-    background: #448AFF;
-}
-
-
-/*close switcher=========================================>*/
-
-.fix>#switcher>.mainarrow>.top.green {
-    background: #00c853;
-}
-
-.fix>#switcher>.mainarrow>.top.yellow {
-    background: #FFA726;
-}
-
-.fix>#switcher>.mainarrow>.top.purple {
-    background: #AB47AC;
-}
-
-.fix>#switcher>.mainarrow>.top.pink {
-    background: #EC407A;
-}
-
-.fix>#switcher>.mainarrow>.top.blue {
-    background: #448AFF;
-}
-
-.fix>#switcher>.mainarrow>.top {
-    transition: 0.3s;
-    height: 4px;
-    border-radius: 10px;
-    background: #448AFF;
-    position: absolute;
-    right: -2px;
-    width: 15px;
-    transform: rotate(45deg);
-    top: -4px;
-}
-
-.fix>#switcher>.mainarrow>.down.green {
-    background: #00c853;
-}
-
-.fix>#switcher>.mainarrow>.down.yellow {
-    background: #FFA726;
-}
-
-.fix>#switcher>.mainarrow>.down.purple {
-    background: #AB47AC;
-}
-
-.fix>#switcher>.mainarrow>.down.pink {
-    background: #EC407A;
-}
-
-.fix>#switcher>.mainarrow>.down.blue {
-    background: #448AFF;
-}
-
-.fix>#switcher>.mainarrow>.down {
-    transition: 0.3s;
-    height: 4px;
-    border-radius: 10px;
-    background: #448AFF;
-    position: absolute;
-    right: -2px;
-    width: 15px;
-    transform: rotate(-45deg);
-    top: 4px;
-}
-
-
-/*open switcher========================================>*/
-
-.fix>#switcher>.mainarrow>.top.open {
-    transition: 0.3s;
-    height: 4px;
-    border-radius: 10px;
-    position: absolute;
-    right: 14px;
-    width: 15px;
-    transform: rotate(-45deg);
-    top: -4px;
-}
-
-.fix>#switcher>.mainarrow>.down.open {
-    transition: 0.3s;
-    height: 4px;
-    border-radius: 10px;
-    position: absolute;
-    right: 14px;
-    width: 15px;
-    transform: rotate(45deg);
-    top: 4px;
-}
-
-.fix>.menu.green:hover {
-    background-color: #00c853;
-    border-left: 7px solid #007e34;
-}
-
-.fix>.menu.yellow:hover {
-    background-color: #FFA726;
-    border-left: 7px solid rgb(134, 89, 22);
-}
-
-.fix>.menu.purple:hover {
-    background-color: #AB47AC;
-    border-left: 7px solid rgb(103, 41, 104);
-}
-
-.fix>.menu.pink:hover {
-    background-color: #EC407A;
-    border-left: 7px solid rgb(133, 36, 68);
-}
-
-.fix>.menu.blue:hover {
-    background-color: #448AFF;
-    border-left: 7px solid rgb(38, 77, 143);
-}
-
-.fix>.menu:hover {
-    transition: 0.3s;
-    color:black;
-    cursor: pointer;
-    background-color: #448AFF;
-    border-left: 7px solid #448AFF;
-}
-
-.fix>.menu {
-    margin-bottom: 5px;
-    transition: 0.3s;
-    border-left: 7px solid #222;
-    height: 40px;
-    font-family: 'sanb';
-    font-size: 18px;
-    line-height: 47px;
-    padding-bottom: 10px;
-    padding-left: 40px;
-    text-align: left;
-    background-repeat: no-repeat;
-    text-indent: 20px;
-}
-
-.fix>.menu:nth-child(5) {
-    background-image: url('../pic/gen.png');
-    background-size: 29px auto;
-    background-position: 5px center;
-}
-
-.fix>.menu:nth-child(4) {
-    background-image: url('../pic/artist.png');
-    background-size: 29px auto;
-    background-position: 5px center;
-}
-
-.fix>.menu:nth-child(3) {
-    background-image: url('../pic/album.png');
-    background-size: 27px auto;
-    background-position: 5px center;
-}
-
-.fix>.menu:nth-child(2) {
-    margin-top: 10px;
-    background-image: url('../pic/home.png');
-    background-size: 30px;
-    background-position: 4px center;
-}
-
-
-/*grid view*/
-
-.fix>#grid:hover {
-    transition: 0.3s;
-    cursor: pointer;
-    background-position: 10px -40px;
-}
-
-.fix>#grid {
-    transition: 0.3s;
-    background-image: url('../pic/grid.png');
-    background-repeat: no-repeat;
-    background-position: 10px center;
-    background-size: 30px;
-    /*border: 1px solid red;*/
-    overflow: hidden;
-    position: absolute;
-    bottom: 65px;
-    left: 0;
-    height: 45px;
-    padding: 0 10px 0 50px;
-    width: 240px;
-    line-height: 13px;
-}
-
-.fix>#grid:hover>.text {
-    transition: 0.3s;
-    line-height: 44px;
-}
-
-.fix>#grid>.text {
-    transition: 0.3s;
-    font-family: sanb;
-    font-size: 14px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 40px;
-    width: 50px;
-    line-height: 130px;
-}
-
-.fix>#grid>#sixitem.green:hover {
-    color: #00c853;
-}
-
-.fix>#grid>#sixitem.yellow:hover {
-    color: #FFA726;
-}
-
-.fix>#grid>#sixitem.purple:hover {
-    color: #AB47AC;
-}
-
-.fix>#grid>#sixitem.pink:hover {
-    color: #EC407A;
-}
-
-.fix>#grid>#sixitem.blue:hover {
-    color: #448AFF;
-}
-
-.fix>#grid>#sixitem:hover {
-    transition: 0.3s;
-    cursor: pointer;
-    color: #448AFF;
-}
-
-.fix>#grid>#sixitem {
-    overflow: hidden;
-    width: 40%;
-    float: left;
-    font-family: 'sanb';
-    font-size: 14px;
-    line-height: 46px;
-}
-
-.fix>#grid>#detailview.green:hover {
-    color: #00c853;
-}
-
-.fix>#grid>#detailview.yellow:hover {
-    color: #FFA726;
-}
-
-.fix>#grid>#detailview.purple:hover {
-    color: #AB47AC;
-}
-
-.fix>#grid>#detailview.pink:hover {
-    color: #EC407A;
-}
-
-.fix>#grid>#detailview.blue:hover {
-    color: #448AFF;
-}
-
-.fix>#grid>#detailview:hover {
-    transition: 0.3s;
-    cursor: pointer;
-    color: #448AFF;
-}
-
-.fix>#grid>#detailview {
-    overflow: hidden;
-    width: 40%;
-    float: right;
-    font-family: 'sanb';
-    font-size: 14px;
-    line-height: 46px;
-}
-
-
-/*search box =================================================*/
-
-.fix>.searchbox:hover {
-    transition: 0.3s;
-    cursor: pointer;
-    background-position: 10px -40px;
-}
-
-.fix>.searchbox {
-    transition: 0.3s;
-    background-image: url('../pic/serch.png');
-    background-repeat: no-repeat;
-    background-position: 10px center;
-    background-size: 30px;
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    height: 45px;
-    padding-left: 50px;
-    width: 230px;
-}
-
-.fix>.searchbox:hover>.look {
-    transition: 0.3s;
-    line-height: 44px;
-}
-
-.fix>.searchbox>.look {
-    transition: 0.3s;
-    font-family: sanb;
-    font-size: 14px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 40px;
-    width: 50px;
-    line-height: 130px;
-}
-
-.fix>.searchbox>.button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 10px;
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 230px;
-    height: 42px;
-    cursor: pointer;
-    overflow: hidden;
-    border: none;
-    -webkit-border-radius: 21px;
-    border-radius: 0;
-    font: normal 18px/normal "Antic", Helvetica, sans-serif;
-    color: rgba(140, 140, 140, 1);
-    text-decoration: none;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    background: rgb(230, 230, 230);
-    -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5) inset;
-    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5) inset;
-    -webkit-transition: all 302ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-    -moz-transition: all 302ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-    -o-transition: all 302ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-    transition: all 302ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-}
-
-.fix>.searchbox>.button:hover {
-    color: rgba(181, 181, 181, 1);
-    background: #ffffff;
-    -webkit-transition: all 300ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-    -moz-transition: all 300ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-    -o-transition: all 300ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-    transition: all 300ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-}
-
-.fix>.searchbox>.button:focus {
-    cursor: text;
-    width: 230px;
-    cursor: default;
-    padding: -13px 20px 0;
-    color: #333;
-    -webkit-transition: all 301ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-    -moz-transition: all 301ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-    -o-transition: all 301ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-    transition: all 301ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-}
+    .fix.fixed {
+        transition: 0.3s;
+        width: 300px;
+    }
+
+
+    /*change size of left menu*/
+
+    .fix > #switcher {
+        cursor: pointer;
+        height: 40px;
+        width: 50px;
+        position: relative;
+    }
+
+        .fix > #switcher > .mainarrow {
+            position: absolute;
+            top: 17px;
+            left: 11px;
+            width: 27px;
+            height: 4px;
+            border-radius: 10px;
+            background: #448AFF;
+        }
+
+            .fix > #switcher > .mainarrow.green {
+                background: #00c853;
+            }
+
+            .fix > #switcher > .mainarrow.yellow {
+                background: #FFA726;
+            }
+
+            .fix > #switcher > .mainarrow.purple {
+                background: #AB47AC;
+            }
+
+            .fix > #switcher > .mainarrow.pink {
+                background: #EC407A;
+            }
+
+            .fix > #switcher > .mainarrow.blue {
+                background: #448AFF;
+            }
+
+
+            /*close switcher=========================================>*/
+
+            .fix > #switcher > .mainarrow > .top.green {
+                background: #00c853;
+            }
+
+            .fix > #switcher > .mainarrow > .top.yellow {
+                background: #FFA726;
+            }
+
+            .fix > #switcher > .mainarrow > .top.purple {
+                background: #AB47AC;
+            }
+
+            .fix > #switcher > .mainarrow > .top.pink {
+                background: #EC407A;
+            }
+
+            .fix > #switcher > .mainarrow > .top.blue {
+                background: #448AFF;
+            }
+
+            .fix > #switcher > .mainarrow > .top {
+                transition: 0.3s;
+                height: 4px;
+                border-radius: 10px;
+                background: #448AFF;
+                position: absolute;
+                right: -2px;
+                width: 15px;
+                transform: rotate(45deg);
+                top: -4px;
+            }
+
+            .fix > #switcher > .mainarrow > .down.green {
+                background: #00c853;
+            }
+
+            .fix > #switcher > .mainarrow > .down.yellow {
+                background: #FFA726;
+            }
+
+            .fix > #switcher > .mainarrow > .down.purple {
+                background: #AB47AC;
+            }
+
+            .fix > #switcher > .mainarrow > .down.pink {
+                background: #EC407A;
+            }
+
+            .fix > #switcher > .mainarrow > .down.blue {
+                background: #448AFF;
+            }
+
+            .fix > #switcher > .mainarrow > .down {
+                transition: 0.3s;
+                height: 4px;
+                border-radius: 10px;
+                background: #448AFF;
+                position: absolute;
+                right: -2px;
+                width: 15px;
+                transform: rotate(-45deg);
+                top: 4px;
+            }
+
+
+            /*open switcher========================================>*/
+
+            .fix > #switcher > .mainarrow > .top.open {
+                transition: 0.3s;
+                height: 4px;
+                border-radius: 10px;
+                position: absolute;
+                right: 14px;
+                width: 15px;
+                transform: rotate(-45deg);
+                top: -4px;
+            }
+
+            .fix > #switcher > .mainarrow > .down.open {
+                transition: 0.3s;
+                height: 4px;
+                border-radius: 10px;
+                position: absolute;
+                right: 14px;
+                width: 15px;
+                transform: rotate(45deg);
+                top: 4px;
+            }
+
+    .fix > .menu.green:hover {
+        background-color: #00c853;
+        border-left: 7px solid #007e34;
+    }
+
+    .fix > .menu.yellow:hover {
+        background-color: #FFA726;
+        border-left: 7px solid rgb(134, 89, 22);
+    }
+
+    .fix > .menu.purple:hover {
+        background-color: #AB47AC;
+        border-left: 7px solid rgb(103, 41, 104);
+    }
+
+    .fix > .menu.pink:hover {
+        background-color: #EC407A;
+        border-left: 7px solid rgb(133, 36, 68);
+    }
+
+    .fix > .menu.blue:hover {
+        background-color: #448AFF;
+        border-left: 7px solid rgb(38, 77, 143);
+    }
+
+    .fix > .menu:hover {
+        transition: 0.3s;
+        color: black;
+        cursor: pointer;
+        background-color: #448AFF;
+        border-left: 7px solid #448AFF;
+    }
+
+    .fix > .menu {
+        margin-bottom: 5px;
+        transition: 0.3s;
+        border-left: 7px solid #222;
+        height: 40px;
+        font-family: 'sanb';
+        font-size: 18px;
+        line-height: 47px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        text-align: left;
+        background-repeat: no-repeat;
+        text-indent: 20px;
+    }
+
+        .fix > .menu:nth-child(5) {
+            background-image: url('../pic/gen.png');
+            background-size: 29px auto;
+            background-position: 5px center;
+        }
+
+        .fix > .menu:nth-child(4) {
+            background-image: url('../pic/artist.png');
+            background-size: 29px auto;
+            background-position: 5px center;
+        }
+
+        .fix > .menu:nth-child(3) {
+            background-image: url('../pic/album.png');
+            background-size: 27px auto;
+            background-position: 5px center;
+        }
+
+        .fix > .menu:nth-child(2) {
+            margin-top: 10px;
+            background-image: url('../pic/home.png');
+            background-size: 30px;
+            background-position: 4px center;
+        }
+
+
+    /*grid view*/
+
+    .fix > #grid:hover {
+        transition: 0.3s;
+        cursor: pointer;
+        background-position: 10px -40px;
+    }
+
+    .fix > #grid {
+        transition: 0.3s;
+        background-image: url('../pic/grid.png');
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        background-size: 30px;
+        /*border: 1px solid red;*/
+        overflow: hidden;
+        position: absolute;
+        bottom: 65px;
+        left: 0;
+        height: 45px;
+        padding: 0 10px 0 50px;
+        width: 240px;
+        line-height: 13px;
+    }
+
+        .fix > #grid:hover > .text {
+            transition: 0.3s;
+            line-height: 44px;
+        }
+
+        .fix > #grid > .text {
+            transition: 0.3s;
+            font-family: sanb;
+            font-size: 14px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 40px;
+            width: 50px;
+            line-height: 130px;
+        }
+
+        .fix > #grid > #sixitem.green:hover {
+            color: #00c853;
+        }
+
+        .fix > #grid > #sixitem.yellow:hover {
+            color: #FFA726;
+        }
+
+        .fix > #grid > #sixitem.purple:hover {
+            color: #AB47AC;
+        }
+
+        .fix > #grid > #sixitem.pink:hover {
+            color: #EC407A;
+        }
+
+        .fix > #grid > #sixitem.blue:hover {
+            color: #448AFF;
+        }
+
+        .fix > #grid > #sixitem:hover {
+            transition: 0.3s;
+            cursor: pointer;
+            color: #448AFF;
+        }
+
+        .fix > #grid > #sixitem {
+            overflow: hidden;
+            width: 40%;
+            float: left;
+            font-family: 'sanb';
+            font-size: 14px;
+            line-height: 46px;
+            margin-left: 30px;
+        }
+
+        .fix > #grid > #detailview.green:hover {
+            color: #00c853;
+        }
+
+        .fix > #grid > #detailview.yellow:hover {
+            color: #FFA726;
+        }
+
+        .fix > #grid > #detailview.purple:hover {
+            color: #AB47AC;
+        }
+
+        .fix > #grid > #detailview.pink:hover {
+            color: #EC407A;
+        }
+
+        .fix > #grid > #detailview.blue:hover {
+            color: #448AFF;
+        }
+
+        .fix > #grid > #detailview:hover {
+            transition: 0.3s;
+            cursor: pointer;
+            color: #448AFF;
+        }
+
+        .fix > #grid > #detailview {
+            overflow: hidden;
+            width: 40%;
+            float: right;
+            font-family: 'sanb';
+            font-size: 14px;
+            line-height: 46px;
+        }
+
+
+    /*search box =================================================*/
+
+    .fix > .searchbox:hover {
+        transition: 0.3s;
+        cursor: pointer;
+        background-position: 10px -40px;
+    }
+
+    .fix > .searchbox {
+        transition: 0.3s;
+        background-image: url('../pic/serch.png');
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        background-size: 30px;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        height: 45px;
+        padding-left: 50px;
+        width: 230px;
+    }
+
+        .fix > .searchbox:hover > .look {
+            transition: 0.3s;
+            line-height: 44px;
+        }
+
+        .fix > .searchbox > .look {
+            transition: 0.3s;
+            font-family: sanb;
+            font-size: 14px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 40px;
+            width: 50px;
+            line-height: 130px;
+        }
+
+        .fix > .searchbox > .button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0 10px;
+            display: inline-block;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 230px;
+            height: 42px;
+            cursor: pointer;
+            overflow: hidden;
+            border: none;
+            -webkit-border-radius: 21px;
+            border-radius: 0;
+            font: normal 18px/normal "Antic", Helvetica, sans-serif;
+            color: rgba(140, 140, 140, 1);
+            text-decoration: none;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            background: rgb(230, 230, 230);
+            -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5) inset;
+            box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5) inset;
+            -webkit-transition: all 302ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+            -moz-transition: all 302ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+            -o-transition: all 302ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+            transition: all 302ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+        }
+
+            .fix > .searchbox > .button:hover {
+                color: rgba(181, 181, 181, 1);
+                background: #ffffff;
+                -webkit-transition: all 300ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+                -moz-transition: all 300ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+                -o-transition: all 300ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+                transition: all 300ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+            }
+
+            .fix > .searchbox > .button:focus {
+                cursor: text;
+                width: 230px;
+                cursor: default;
+                padding: -13px 20px 0;
+                color: #333;
+                -webkit-transition: all 301ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+                -moz-transition: all 301ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+                -o-transition: all 301ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+                transition: all 301ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+            }
 
 
 /*========================accent color change===============================*/
@@ -478,76 +494,76 @@ body {
     background-position: 28px 50px;
 }
 
-#color:hover>.pallet {
-    transition: 0.3s;
-    cursor: default;
-    right: -50px;
-    top: -50px;
-    opacity: 1;
-}
+    #color:hover > .pallet {
+        transition: 0.3s;
+        cursor: default;
+        right: -50px;
+        top: -50px;
+        opacity: 1;
+    }
 
-#color>.pallet {
-    transition: 0.3s;
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    right: -50px;
-    top: -150px;
-    background-color: #111;
-    border-radius: 50%;
-    opacity: 0;
-    z-index: -5;
-}
+    #color > .pallet {
+        transition: 0.3s;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        right: -50px;
+        top: -150px;
+        background-color: #111;
+        border-radius: 50%;
+        opacity: 0;
+        z-index: -5;
+    }
 
-#color>.pallet>div:hover {
-    transition: 0.3s;
-    cursor: pointer;
-    border-color: orangered;
-}
+        #color > .pallet > div:hover {
+            transition: 0.3s;
+            cursor: pointer;
+            border-color: orangered;
+        }
 
-#color>.pallet>div.border {
-    transition: 0.3s;
-    border-color: orangered;
-}
+        #color > .pallet > div.border {
+            transition: 0.3s;
+            border-color: orangered;
+        }
 
-#color>.pallet>div {
-    transition: 0.3s;
-    position: absolute;
-    border-radius: 50%;
-    border: 4px solid #ddd;
-    width: 25px;
-    height: 25px;
-}
+        #color > .pallet > div {
+            transition: 0.3s;
+            position: absolute;
+            border-radius: 50%;
+            border: 4px solid #ddd;
+            width: 25px;
+            height: 25px;
+        }
 
-#color>.pallet>#green {
-    left: 11px;
-    top: 105px;
-    background-color: #00c853;
-}
+        #color > .pallet > #green {
+            left: 11px;
+            top: 105px;
+            background-color: #00c853;
+        }
 
-#color>.pallet>#yellow {
-    right: 11px;
-    top: 105px;
-    background-color: #FFA726;
-}
+        #color > .pallet > #yellow {
+            right: 11px;
+            top: 105px;
+            background-color: #FFA726;
+        }
 
-#color>.pallet>#purple {
-    right: 37px;
-    top: 143px;
-    background-color: #AB47AC;
-}
+        #color > .pallet > #purple {
+            right: 37px;
+            top: 143px;
+            background-color: #AB47AC;
+        }
 
-#color>.pallet>#pink {
-    left: 37px;
-    top: 143px;
-    background-color: #EC407A;
-}
+        #color > .pallet > #pink {
+            left: 37px;
+            top: 143px;
+            background-color: #EC407A;
+        }
 
-#color>.pallet>#blue {
-    left: 84px;
-    top: 157px;
-    background-color: #448aff;
-}
+        #color > .pallet > #blue {
+            left: 84px;
+            top: 157px;
+            background-color: #448aff;
+        }
 
 
 /*=======================================================*/
@@ -560,133 +576,139 @@ body {
     width: 1340px;
 }
 
-#nav>.set.green {
-    color: #00c853;
-}
+    #nav.green > .set {
+        color: #00c853;
+    }
 
-#nav>.set.yellow {
-    color: #FFA726;
-}
+    #nav.yellow > .set {
+        color: #FFA726;
+    }
 
-#nav>.set.purple {
-    color: #AB47AC;
-}
+    #nav.purple > .set {
+        color: #AB47AC;
+    }
 
-#nav>.set.pink {
-    color: #EC407A;
-}
+    #nav.pink > .set {
+        color: #EC407A;
+    }
 
-#nav>.set.blue {
-    color: #448AFF;
-}
+    #nav.blue > .set {
+        color: #448AFF;
+    }
 
-#nav>.set {
-    color: #448AFF;
-    transition: 0.3s;
-}
+    #nav > .set {
+        color: #448AFF;
+        transition: 0.3s;
+    }
 
-#nav>div.green:hover {
-    color: #00c853;
-}
+    #nav.green > div:hover {
+        color: #00c853;
+    }
 
-#nav>div.yellow:hover {
-    color: #FFA726;
-}
+    #nav.yellow > div:hover {
+        color: #FFA726;
+    }
 
-#nav>div.purple:hover {
-    color: #AB47AC;
-}
+    #nav.purple > div:hover {
+        color: #AB47AC;
+    }
 
-#nav>div.pink:hover {
-    color: #EC407A;
-}
+    #nav.pink > div:hover {
+        color: #EC407A;
+    }
 
-#nav>div.blue:hover {
-    color: #448AFF;
-}
+    #nav.blue > div:hover {
+        color: #448AFF;
+    }
 
-#nav>div:hover {
-    cursor: pointer;
-    color: #448AFF;
-    transition: 0.3s;
-}
+    #nav > div:hover {
+        cursor: pointer;
+        color: #448AFF;
+        transition: 0.3s;
+    }
 
-#nav>div {
-    transition: 0.3s;
-    margin-right: 5px;
-    float: left;
-    height: 100%;
-    width: 20px;
-    text-align: center;
-    font-family: sanb;
-    line-height: 30px;
-}
+    #nav > div {
+        transition: 0.3s;
+        margin-right: 5px;
+        float: left;
+        height: 100%;
+        width: 20px;
+        text-align: center;
+        font-family: sanb;
+        line-height: 30px;
+    }
 
-#nav>.right,
-#nav>.left {
-    width: 30px;
-    background-size: 18px;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+    #nav > .right,
+    #nav > .left {
+        width: 30px;
+        background-size: 18px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
 
 
-/*///========================================right botton animation============*/
+        /*///========================================right botton animation============*/
 
-#nav>.right:hover {
-    background-image: url('../pic/rightb.png');
-    animation: rightanim 0.6s infinite;
-}
+        #nav > .right:hover {
+            animation: rightanim 0.5s infinite;
+        }
 
 @keyframes rightanim {
     0% {
         background-position: center center;
     }
+
     25% {
         background-position: 13px center;
     }
+
     50% {
         background-position: center center;
     }
+
     75% {
         background-position: 0 center;
     }
+
     100% {
         background-position: center center;
     }
 }
 
-#nav>.right {
+#nav > .right {
     background-image: url('../pic/right.png');
 }
 
 
 /*///========================================left botton animation============*/
 
-#nav>.left:hover {
-    background-image: url('../pic/leftb.png');
-    animation: leftanim 0.6s infinite;
+#nav > .left:hover {
+    animation: leftanim 0.5s infinite;
 }
 
 @keyframes leftanim {
     0% {
         background-position: center center;
     }
+
     25% {
         background-position: 0 center;
     }
+
     50% {
         background-position: center center;
     }
+
     75% {
         background-position: 13px center;
     }
+
     100% {
         background-position: center center;
     }
 }
 
-#nav>.left {
+#nav > .left {
     background-image: url('../pic/left.png');
 }
 
@@ -714,201 +736,221 @@ body {
 }
 
 
-/*===================items and childrens====================================*/
+    /*===================items and childrens====================================*/
 
-#all>.items.green:hover {
-    background: #00c853;
-}
+    #all.green > .items:hover {
+        background: #00c853;
+    }
 
-#all>.items.yellow:hover {
-    background: #FFA726;
-}
+    #all.yellow > .items:hover {
+        background: #FFA726;
+    }
 
-#all>.items.purple:hover {
-    background: #AB47AC;
-}
+    #all.purple > .items:hover {
+        background: #AB47AC;
+    }
 
-#all>.items.pink:hover {
-    background: #EC407A;
-}
+    #all.pink > .items:hover {
+        background: #EC407A;
+    }
 
-#all>.items.blue:hover {
-    background: #448AFF;
-}
+    #all.blue > .items:hover {
+        background: #448AFF;
+    }
 
-#all>.items:hover {
-    transition: 0.3s;
-    cursor: pointer;
-    background: #448AFF;
-    transform: translateY(-15px);
-}
+    #all.green.view2 > .items:hover {
+        background: #00c853;
+    }
 
-#all>.items {
-    transition: 0.3s;
-    overflow: hidden;
-    width: 200px;
-    background: rgb(214, 214, 214);
-    margin: 10px;
-    padding: 4px 0 10px 0;
-    float: left;
-    position: relative;
-}
+    #all.yellow.view2 > .items:hover {
+        background: #FFA726;
+    }
 
-#all>.items>.detail {
-    transition: 0;
-    overflow: hidden;
-    width: 0;
-    height: 0;
-    padding: 5px 10px;
-}
+    #all.purple.view2 > .items:hover {
+        background: #AB47AC;
+    }
 
-#all>.items:hover>.detail>.deshead {
-    transition: 0.3s;
-    color: white;
-}
+    #all.pink.view2 > .items:hover {
+        background: #EC407A;
+    }
 
-#all>.items>.detail>.deshead {
-    transition: 0.3s;
-    height: 30px;
-    font-family: 'sanr';
-    font-size: 20px;
-    border-bottom: 1px solid #aaa;
-    margin-top: 30px;
-}
+    #all.blue.view2 > .items:hover {
+        background: #448AFF;
+    }
 
-#all>.items:hover>.detail>.note {
-    transition: 0.3s;
-    color: white;
-}
+    #all > .items:hover {
+        transition: 0.3s;
+        cursor: pointer;
+        background: #448AFF;
+        transform: translateY(-15px);
+    }
 
-#all>.items>.detail>.note {
-    transition: 0.3s;
-    height: 240px;
-    font-family: 'sanr';
-    font-size: 15px;
-    margin-top: 10px;
-}
+    #all > .items {
+        transition: 0.3s;
+        overflow: hidden;
+        width: 200px;
+        background: rgb(214, 214, 214);
+        margin: 10px;
+        padding: 4px 0 10px 0;
+        float: left;
+        position: relative;
+    }
 
-#all>.items:hover>.language {
-    transition: 0.3s;
-    transform: rotate(-45deg) translateY(-60px);
-}
+        #all > .items > .detail {
+            transition: 0;
+            overflow: hidden;
+            width: 0;
+            height: 0;
+            padding: 5px 10px;
+        }
 
-#all>.items>.language {
-    text-align: center;
-    transition: 0.3s;
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    top: -51px;
-    left: -51px;
-    background: rgba(30, 30, 30, 0.715);
-    z-index: 100;
-    font-family: 'sanr', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 170px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    transform: rotate(-45deg) translateY(-9px);
-    box-shadow: 0 0 10px 5px #000;
-}
+        #all > .items:hover > .detail > .deshead {
+            transition: 0.3s;
+            color: white;
+        }
 
-#all>.items:hover>img {
-    transition: 0.3s;
-    border-radius: 0;
-}
+        #all > .items > .detail > .deshead {
+            transition: 0.3s;
+            height: 30px;
+            font-family: 'sanr';
+            font-size: 20px;
+            border-bottom: 1px solid #aaa;
+            margin-top: 30px;
+        }
 
-#all>.items>img {
-    display: inline-block;
-    margin: -10px 0 0 4px;
-    transition: 0.3s;
-    width: 190px;
-    height: 190px;
-    border: 1px solid rgba(255, 255, 255, 0);
-    border-radius: 50%;
-}
+        #all > .items:hover > .detail > .note {
+            transition: 0.3s;
+            color: white;
+        }
 
-#all>.items>h2 {
-    height: 28px;
-    background: red;
-    color: #fff;
-    font-family: sanb;
-    font-size: 21px;
-    margin: 5px auto 5px;
-    line-height: 26px;
-    font-weight: normal;
-    text-align: center;
-}
+        #all > .items > .detail > .note {
+            transition: 0.3s;
+            height: 240px;
+            font-family: 'sanr';
+            font-size: 15px;
+            margin-top: 10px;
+        }
 
-#all>.items:hover>a {
-    /*color: white;*/
-    transition: 0.3s;
-}
+        #all > .items:hover > .language {
+            transition: 0.3s;
+            transform: rotate(-45deg) translateY(-60px);
+        }
 
-#all>.items>a {
-    text-align: center;
-    display: inline-block;
-    width: 200px;
-    margin-top: 5px;
-    transition: 0.3s;
-    text-decoration: none;
-    font-family: sanb;
-    font-size: 16px;
-    color: black;
-}
+        #all > .items > .language {
+            text-align: center;
+            transition: 0.3s;
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            top: -51px;
+            left: -51px;
+            background: rgba(30, 30, 30, 0.715);
+            z-index: 100;
+            font-family: 'sanr', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 170px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            transform: rotate(-45deg) translateY(-9px);
+            box-shadow: 0 0 10px 5px #000;
+        }
 
-#all>.items:hover>.price {
-    /*color: black;*/
-    transition: 0.3s;
-}
+        #all > .items:hover > img {
+            transition: 0.3s;
+            border-radius: 0;
+        }
 
-#all>.items>.price {
-    transition: 0.3s;
-    display: inline-block;
-    height: 25px;
-    font-size: 16px;
-    margin-top: 5px;
-}
+        #all > .items > img {
+            display: inline-block;
+            margin: -10px 0 0 4px;
+            transition: 0.3s;
+            width: 190px;
+            height: 190px;
+            border: 1px solid rgba(255, 255, 255, 0);
+            border-radius: 50%;
+        }
 
-#all>.items>.star {
-    background: url('../pic/star.png') repeat-x;
-    background-size: 25px;
-    margin: 5px auto;
-    height: 25px;
-}
+        #all > .items > h2 {
+            height: 28px;
+            background: red;
+            color: #fff;
+            font-family: sanb;
+            font-size: 21px;
+            margin: 5px auto 5px;
+            line-height: 26px;
+            font-weight: normal;
+            text-align: center;
+        }
+
+        #all > .items:hover > a {
+            /*color: white;*/
+            transition: 0.3s;
+        }
+
+        #all > .items > a {
+            text-align: center;
+            display: inline-block;
+            width: 200px;
+            margin-top: 5px;
+            transition: 0.3s;
+            text-decoration: none;
+            font-family: sanb;
+            font-size: 16px;
+            color: black;
+        }
+
+        #all > .items:hover > .price {
+            /*color: black;*/
+            transition: 0.3s;
+        }
+
+        #all > .items > .price {
+            transition: 0.3s;
+            display: inline-block;
+            height: 25px;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        #all > .items > .star {
+            background: url('../pic/star.png') repeat-x;
+            background-size: 25px;
+            margin: 5px auto;
+            height: 25px;
+        }
 
 
-/*=======================second view========================================*/
+    /*=======================second view========================================*/
 
-#all.view2>.items {
-    transition: 0;
-    width: 420px;
-}
+    #all.view2 > .items {
+        transition: 0;
+        width: 420px;
+    }
 
-#all.view2>.items>.detail {
-    transition: 0.3s;
-    width: 45%;
-    height: 310px;
-    float: right;
-}
+        #all.view2 > .items > .detail {
+            transition: 0.3s;
+            width: 45%;
+            height: 310px;
+            float: right;
+        }
 
-#all.view2>.items>img {
-    display: inline-block;
-    margin: 0px 0 0 4px;
-}
+        #all.view2 > .items > img {
+            display: inline-block;
+            margin: 0px 0 0 4px;
+        }
 
-#all.view2>.items>h2 {
-    width: 190px;
-    margin: 5px 0 5px 4px;
-    text-align: center;
-}
+        #all.view2 > .items > h2 {
+            width: 190px;
+            margin: 5px 0 5px 4px;
+            text-align: center;
+        }
 
-#all.view2>.items>a {
-    margin: 5px 0 0 4px;
-    width: 195px;
-    text-align: center;
-}
+        #all.view2 > .items > a {
+            margin: 5px 0 0 4px;
+            width: 195px;
+            text-align: center;
+        }
 
-#all.view2>.items>.star {
-    margin: 26px auto 0 auto;
-}
+        #all.view2 > .items > .star {
+            margin: 26px auto 0 auto;
+        }

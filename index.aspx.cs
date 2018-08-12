@@ -62,9 +62,6 @@ public partial class script_index : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
-        
-
         archive.Clear();
 
         archive.Add(new artists("A$AP Ferg", "Striving", 8, "7.jpg", 3.4, "The line between “mixtape” and a proper “album” has long been inexorably blurred, with the distinction lying mostly in how the artist chooses to refer to it. For Ferg, it appears to be an indictment of the record’s quality, or perhaps how much time he spent on it."));
@@ -90,7 +87,7 @@ public partial class script_index : System.Web.UI.Page
 
         archive.Add(new artists("Black Sabbath", "Black Sabbath", 8, "19.jpg", 3.4, "The line between “mixtape” and a proper “album” has long been inexorably blurred, with the distinction lying mostly in how the artist chooses to refer to it. For Ferg, it appears to be an indictment of the record’s quality, or perhaps how much time he spent on it."));
         archive.Add(new artists("Black Sabbath", "Paranoid", 15, "20.jpg", 4.4, "Invasion of Privacy is an emphatic response to those skeptics. The album is showy and upfront, at once brazen and vulnerable. On her assured and outspoken debut, Cardi shuffles from pop-rap to designer trap to sing-song ballads and strutting promenades."));
-        archive.Add(new artists("Black Sabbath", "Master Of Reality", 16, "21.jpg", 5, "On ‘Survival’, the first of 25 tracks from Drake’s colossal, dual-sided album ‘Scorpion’, the rapper opens by directly addressing his current state of affairs: “All of this disorder, no addressin’ / The crown is broken in pieces, but there’s more in my possession”."));
+        archive.Add(new artists("Black Sabbath", "Master", 16, "21.jpg", 5, "On ‘Survival’, the first of 25 tracks from Drake’s colossal, dual-sided album ‘Scorpion’, the rapper opens by directly addressing his current state of affairs: “All of this disorder, no addressin’ / The crown is broken in pieces, but there’s more in my possession”."));
         archive.Add(new artists("Black Sabbath", "Sabotage", 13, "22.jpg", 4, "His sixth studio album, Khalifa, would suggest he’s splitting the difference—creating an album that is more personal (hence its partially eponymous title). After all, Wiz’s relationship with pot is a very personal thing (to him) and so is his need for success."));
         archive.Add(new artists("Black Sabbath", "Mob Rules", 10, "23.jpg", 4, "Laced with 16 tracks in total, the follow up to Fuk Wat They Talkin Bout is led by the previously heard singles “Baller Alert,” & “Dope’d Up,” which if you remember received a Thriller-inspired video starring Kylie Jenner a couple months back."));
         archive.Add(new artists("Black Sabbath", "Forbidden", 12, "24.jpg", 3.8, "G-Eazy continuously proves he's one of the most underrated artists. His catalog is filled with bangers and he consistently delivers every single time. The Bay Area recently revealed the album and release date of his upcoming album."));

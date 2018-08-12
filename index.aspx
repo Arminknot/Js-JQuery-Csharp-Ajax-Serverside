@@ -14,18 +14,19 @@
 
 
     <!--Creatin Elements Whit jQuery =====================================================-->
+    <script>
 
-    <%--<script>
-
-        window.onload = function () { }
+        window.onload = function () {
+        }
 
         $(document).ready(function () {
 
-            
+          
 
         });
 
-    </script>--%>
+    </script>
+
 
     <script>
 
@@ -118,7 +119,7 @@
                         des = $("<div>").addClass("detail");
                         head = $("<div>").addClass("deshead").html("Description:");
                         note = $("<div>").addClass("note").html(fo[i].review);
-                        nam = $("<div>").addClass("language").html("jQ").css({ background: "green" });
+                        nam = $("<div>").addClass("language").html("jQ").css({ background: "brown" });
                         im = $("<img>").attr({ src: "pic/" + fo[i].pic });
                         h = $("<h2>").html(fo[i].artist);
                         anc = $("<a>").html("Album: " + fo[i].album);
@@ -197,9 +198,9 @@
 
             <div class="text">View</div>
 
-            <div id="sixitem" runat="server" onclick="normalview()" style="color: orangered">Normal View</div>
+            <div id="sixitem" runat="server" onclick="normalview()" style="color: orangered">Normal</div>
 
-            <div id="detailview" runat="server" onclick="detailview()">Show Details</div>
+            <div id="detailview" runat="server" onclick="detailview()">Details</div>
 
         </div>
 
@@ -270,15 +271,17 @@
 
     //==============switch view botton=================================
     function detailview() {
-        all.className = "view2";
+        $("#all").addClass("view2");
         $("#detailview").css({ color: "orangered" });
         $("#sixitem").css({ color: "" });
+        caca = "view2";
     }
 
     function normalview() {
         all.className = all.className.replace("view2", "");
         $("#detailview").css({ color: "" });
         $("#sixitem").css({ color: "orangered" });
+        caca = "";
     }
 
     //switch left tab=================================================
@@ -314,12 +317,8 @@
         $("#switcher>.mainarrow>.down").css({background:"#00c853"});
         $("#grid>#sixitem").removeClass().addClass("green");
         $("#grid>#detailview").removeClass().addClass("green");
-        adad = $("#nav>.set").html();
-        $("#nav>div").removeClass().addClass("green");
-        $("#nav>div:eq(0)").removeClass().addClass("left");
-        $("#nav>div:eq(" + adad + ")").addClass("set");
-        $("#nav>div:last-child").removeClass().addClass("right");
-        $("#all>.items").removeClass().addClass("items").addClass("green");
+        $("#nav").removeClass().addClass("green");
+        $("#all").removeClass().addClass("green").addClass(caca);
         $(".fix>.menu").removeClass().addClass("menu").addClass("green");
     }
 
@@ -329,12 +328,8 @@
         $("#switcher>.mainarrow>.down").css({background:"#FFA726"});
         $("#grid>#sixitem").removeClass().addClass("yellow");
         $("#grid>#detailview").removeClass().addClass("yellow");
-        adad = $("#nav>.set").html();
-        $("#nav>div").removeClass().addClass("yellow");
-        $("#nav>div:eq(0)").removeClass().addClass("left");
-        $("#nav>div:eq(" + adad + ")").addClass("set");
-        $("#nav>div:last-child").removeClass().addClass("right");
-        $("#all>.items").removeClass().addClass("items").addClass("yellow");
+        $("#nav").removeClass().addClass("yellow");
+        $("#all").removeClass().addClass("yellow").addClass(caca);
         $(".fix>.menu").removeClass().addClass("menu").addClass("yellow");
     }
 
@@ -344,12 +339,8 @@
         $("#switcher>.mainarrow>.down").css({background:"#AB47AC"});
         $("#grid>#sixitem").removeClass().addClass("purple");
         $("#grid>#detailview").removeClass().addClass("purple");
-        adad = $("#nav>.set").html();
-        $("#nav>div").removeClass().addClass("purple");
-        $("#nav>div:eq(0)").removeClass().addClass("left");
-        $("#nav>div:eq(" + adad + ")").addClass("set");
-        $("#nav>div:last-child").removeClass().addClass("right");
-        $("#all>.items").removeClass().addClass("items").addClass("purple");
+        $("#nav").removeClass().addClass("purple");
+        $("#all").removeClass().addClass("purple").addClass(caca);
         $(".fix>.menu").removeClass().addClass("menu").addClass("purple");
     }
 
@@ -357,14 +348,10 @@
         $("#switcher>.mainarrow").css({background:"#EC407A"});
         $("#switcher>.mainarrow>.top").css({background:"#EC407A"});
         $("#switcher>.mainarrow>.down").css({background:"#EC407A"});
-        $("#grid>#sixitem").removeClass().addClass("pink");
+       $("#grid>#sixitem").removeClass().addClass("pink");
         $("#grid>#detailview").removeClass().addClass("pink");
-        adad = $("#nav>.set").html();
-        $("#nav>div").removeClass().addClass("pink");
-        $("#nav>div:eq(0)").removeClass().addClass("left");
-        $("#nav>div:eq(" + adad + ")").addClass("set");
-        $("#nav>div:last-child").removeClass().addClass("right");
-        $("#all>.items").removeClass().addClass("items").addClass("pink");
+        $("#nav").removeClass().addClass("pink");
+        $("#all").removeClass().addClass("pink").addClass(caca);
         $(".fix>.menu").removeClass().addClass("menu").addClass("pink");
     }
 
@@ -374,12 +361,8 @@
         $("#switcher>.mainarrow>.down").css({background:"#448AFF"});
         $("#grid>#sixitem").removeClass().addClass("blue");
         $("#grid>#detailview").removeClass().addClass("blue");
-        adad = $("#nav>.set").html();
-        $("#nav>div").removeClass().addClass("blue");
-        $("#nav>div:eq(0)").removeClass().addClass("left");
-        $("#nav>div:eq(" + adad + ")").addClass("set");
-        $("#nav>div:last-child").removeClass().addClass("right");
-        $("#all>.items").removeClass().addClass("items").addClass("blue");
+        $("#nav").removeClass().addClass("blue");
+        $("#all").removeClass().addClass("blue").addClass(caca);
         $(".fix>.menu").removeClass().addClass("menu").addClass("blue");
     }
 

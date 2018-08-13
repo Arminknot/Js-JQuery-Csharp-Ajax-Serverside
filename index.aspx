@@ -15,21 +15,6 @@
 
     <!--Creatin Elements Whit jQuery =====================================================-->
     <script>
-
-        window.onload = function () {
-        }
-
-        $(document).ready(function () {
-
-          
-
-        });
-
-    </script>
-
-
-    <script>
-
         fo = [];
         v = "v1";
 
@@ -44,14 +29,15 @@
                 itemnumber = $("#select>option:selected").html();
                 createtab(itemnumber);
 
-                fill_items(0, itemnumber);//change item according to select view
+                fill_items(0, itemnumber); //change item according to select view
             })
 
 
-            $("#nav").on("click", "div", function () {
-
+            $("#nav").on("click", "div:not(:eq(0)):not(:last-child)", function () {
+                //all div's exept right & left
                 $("#nav>div").removeClass("set");
                 $(this).addClass("set");
+
                 $("#nav>div:eq(0)").addClass("left");
                 $("#nav>div:last-child").addClass("right");
 
@@ -119,12 +105,18 @@
                         des = $("<div>").addClass("detail");
                         head = $("<div>").addClass("deshead").html("Description:");
                         note = $("<div>").addClass("note").html(fo[i].review);
-                        nam = $("<div>").addClass("language").html("jQ").css({ background: "brown" });
-                        im = $("<img>").attr({ src: "pic/" + fo[i].pic });
+                        nam = $("<div>").addClass("language").html("jQ").css({
+                            background: "brown"
+                        });
+                        im = $("<img>").attr({
+                            src: "pic/" + fo[i].pic
+                        });
                         h = $("<h2>").html(fo[i].artist);
                         anc = $("<a>").html("Album: " + fo[i].album);
                         pipi = $("<a>").addClass("price").html("Price: " + fo[i].price);
-                        st = $("<div>").addClass("star").css({ width: (25 * fo[i].rate) - 2 + "px" });
+                        st = $("<div>").addClass("star").css({
+                            width: (25 * fo[i].rate) - 2 + "px"
+                        });
 
                         it.append(des).append(nam).append(im).append(h).append(anc).append(pipi).append(st);
                         des.append(head).append(note);
@@ -137,7 +129,6 @@
 
             });
         }
-
     </script>
 
 </head>
@@ -160,6 +151,8 @@
             <div id="pink" onclick="pink()"></div>
             <div id="blue" onclick="blue()" class="border"></div>
         </div>
+
+
     </div>
 
 
@@ -261,7 +254,6 @@
 
 
 <script>
-
     function openmenu() {
         if (tt == 0) {
             switcher();
@@ -272,34 +264,47 @@
     //==============switch view botton=================================
     function detailview() {
         $("#all").addClass("view2");
-        $("#detailview").css({ color: "orangered" });
-        $("#sixitem").css({ color: "" });
+        $("#detailview").css({
+            color: "orangered"
+        });
+        $("#sixitem").css({
+            color: ""
+        });
         caca = "view2";
     }
 
     function normalview() {
         all.className = all.className.replace("view2", "");
-        $("#detailview").css({ color: "" });
-        $("#sixitem").css({ color: "orangered" });
+        $("#detailview").css({
+            color: ""
+        });
+        $("#sixitem").css({
+            color: "orangered"
+        });
         caca = "";
     }
 
     //switch left tab=================================================
 
     tt = 0;
+
     function switcher() {
 
         if (tt == 0) {
             $("#fixing").addClass("fixed");
             $("#topi").addClass("open");
             $("#downi").addClass("open");
-            $("body").css({ padding: "0 0 0 300px" });
+            $("body").css({
+                padding: "0 0 0 300px"
+            });
             tt = 1;
         } else {
             $("#fixing").removeClass("fixed");
             $("#topi").removeClass("open");
             $("#downi").removeClass("open");
-            $("body").css({ padding: "0 0 0 50px" });
+            $("body").css({
+                padding: "0 0 0 50px"
+            });
             tt = 0;
         }
     }
@@ -312,60 +317,62 @@
 
 
     function green() {
-        $("#switcher>.mainarrow").css({background:"#00c853"});
-        $("#switcher>.mainarrow>.top").css({background:"#00c853"});
-        $("#switcher>.mainarrow>.down").css({background:"#00c853"});
+        $("#switcher>.mainarrow").css({background: "#00c853"});
+        $("#switcher>.mainarrow>.top").css({background: "#00c853"});
+        $("#switcher>.mainarrow>.down").css({background: "#00c853"});
         $("#grid>#sixitem").removeClass().addClass("green");
         $("#grid>#detailview").removeClass().addClass("green");
         $("#nav").removeClass().addClass("green");
+        $("#fixing>.menu").removeClass().addClass("menu").addClass("green");
         $("#all").removeClass().addClass("green").addClass(caca);
-        $(".fix>.menu").removeClass().addClass("menu").addClass("green");
+
     }
 
     function yellow() {
-        $("#switcher>.mainarrow").css({background:"#FFA726"});
-        $("#switcher>.mainarrow>.top").css({background:"#FFA726"});
-        $("#switcher>.mainarrow>.down").css({background:"#FFA726"});
+        $("#switcher>.mainarrow").css({background: "#FFA726"});
+        $("#switcher>.mainarrow>.top").css({background: "#FFA726"});
+        $("#switcher>.mainarrow>.down").css({background: "#FFA726"});
         $("#grid>#sixitem").removeClass().addClass("yellow");
         $("#grid>#detailview").removeClass().addClass("yellow");
         $("#nav").removeClass().addClass("yellow");
-        $("#all").removeClass().addClass("yellow").addClass(caca);
         $(".fix>.menu").removeClass().addClass("menu").addClass("yellow");
+        $("#all").removeClass().addClass("yellow").addClass(caca);
     }
 
     function purple() {
-        $("#switcher>.mainarrow").css({background:"#AB47AC"});
-        $("#switcher>.mainarrow>.top").css({background:"#AB47AC"});
-        $("#switcher>.mainarrow>.down").css({background:"#AB47AC"});
+        $("#switcher>.mainarrow").css({background: "#AB47AC"});
+        $("#switcher>.mainarrow>.top").css({background: "#AB47AC"});
+        $("#switcher>.mainarrow>.down").css({background: "#AB47AC"});
         $("#grid>#sixitem").removeClass().addClass("purple");
         $("#grid>#detailview").removeClass().addClass("purple");
         $("#nav").removeClass().addClass("purple");
-        $("#all").removeClass().addClass("purple").addClass(caca);
         $(".fix>.menu").removeClass().addClass("menu").addClass("purple");
+        $("#all").removeClass().addClass("purple").addClass(caca);
+
     }
 
     function pink() {
-        $("#switcher>.mainarrow").css({background:"#EC407A"});
-        $("#switcher>.mainarrow>.top").css({background:"#EC407A"});
-        $("#switcher>.mainarrow>.down").css({background:"#EC407A"});
-       $("#grid>#sixitem").removeClass().addClass("pink");
+        $("#switcher>.mainarrow").css({background: "#EC407A"});
+        $("#switcher>.mainarrow>.top").css({background: "#EC407A"});
+        $("#switcher>.mainarrow>.down").css({background: "#EC407A"});
+        $("#grid>#sixitem").removeClass().addClass("pink");
         $("#grid>#detailview").removeClass().addClass("pink");
         $("#nav").removeClass().addClass("pink");
-        $("#all").removeClass().addClass("pink").addClass(caca);
         $(".fix>.menu").removeClass().addClass("menu").addClass("pink");
+        $("#all").removeClass().addClass("pink").addClass(caca);
     }
 
     function blue() {
-        $("#switcher>.mainarrow").css({background:"#448AFF"});
-        $("#switcher>.mainarrow>.top").css({background:"#448AFF"});
-        $("#switcher>.mainarrow>.down").css({background:"#448AFF"});
+        $("#switcher>.mainarrow").css({background: "#448AFF"});
+        $("#switcher>.mainarrow>.top").css({background: "#448AFF"});
+        $("#switcher>.mainarrow>.down").css({background: "#448AFF"});
         $("#grid>#sixitem").removeClass().addClass("blue");
         $("#grid>#detailview").removeClass().addClass("blue");
         $("#nav").removeClass().addClass("blue");
-        $("#all").removeClass().addClass("blue").addClass(caca);
         $(".fix>.menu").removeClass().addClass("menu").addClass("blue");
-    }
+        $("#all").removeClass().addClass("blue").addClass(caca);
 
+    }
 </script>
 
 

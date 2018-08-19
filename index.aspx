@@ -47,8 +47,65 @@
                 start = (page - 1) * itemnumber;
                 fill_items(start, itemnumber);
             });
+
+
+            ////call for right tab click function========================
+            $("#nav").on("click", ".right", function () {
+                sis = $("#nav>.set").html();
+
+                if (num > sis) {
+
+                    nexttab(sis);
+
+                }
+            });
+
+            ////call for left tab click function========================
+            $("#nav").on("click", ".left", function () {
+                kiss = $("#nav>.set").html();
+
+                if (1 < kiss) {
+
+                    prevtab(kiss);
+
+                }
+            });
+
         })
 
+        ////right tab click function==============================
+        function nexttab(sis) {
+            n = ++sis;
+            //alert(n);
+            $("#nav>div").removeClass("set");
+            $("#nav>div:eq(" + n + ")").addClass("set");
+
+            $("#nav>div:eq(0)").addClass("left");
+            $("#nav>div:last-child").addClass("right");
+
+            page = $("#nav>div:eq(" + n + ")").html();
+            itemnumber = $("#select>option:selected").html();
+
+            start = (page - 1) * itemnumber;
+            fill_items(start, itemnumber);
+        }
+
+        ////left tab click function==============================
+        function prevtab(kiss) {
+            n = --kiss;
+            //alert(n);
+            $("#nav>div").removeClass("set");
+            $("#nav>div:eq(" + n + ")").addClass("set");
+
+            $("#nav>div:eq(0)").addClass("left");
+            $("#nav>div:last-child").addClass("right");
+
+            page = $("#nav>div:eq(" + n + ")").html();
+            itemnumber = $("#select>option:selected").html();
+
+            start = (page - 1) * itemnumber;
+            fill_items(start, itemnumber);
+        }
 
         function createtab(psize) {
             $.ajax({
@@ -254,33 +311,20 @@
 
 
 <script>
-    function openmenu() {
-        if (tt == 0) {
-            switcher();
-        }
-    }
-
-
     //==============switch view botton=================================
+    caca = "";
+
     function detailview() {
         $("#all").addClass("view2");
-        $("#detailview").css({
-            color: "orangered"
-        });
-        $("#sixitem").css({
-            color: ""
-        });
+        $("#detailview").css({ color: "orangered" });
+        $("#sixitem").css({ color: "" });
         caca = "view2";
     }
 
     function normalview() {
         all.className = all.className.replace("view2", "");
-        $("#detailview").css({
-            color: ""
-        });
-        $("#sixitem").css({
-            color: "orangered"
-        });
+        $("#detailview").css({ color: "" });
+        $("#sixitem").css({ color: "orangered" });
         caca = "";
     }
 
@@ -288,23 +332,25 @@
 
     tt = 0;
 
+    function openmenu() {
+        if (tt == 0) {
+            switcher();
+        }
+    }
+
     function switcher() {
 
         if (tt == 0) {
             $("#fixing").addClass("fixed");
             $("#topi").addClass("open");
             $("#downi").addClass("open");
-            $("body").css({
-                padding: "0 0 0 300px"
-            });
+            $("body").css({ padding: "0 0 0 300px" });
             tt = 1;
         } else {
             $("#fixing").removeClass("fixed");
             $("#topi").removeClass("open");
             $("#downi").removeClass("open");
-            $("body").css({
-                padding: "0 0 0 50px"
-            });
+            $("body").css({ padding: "0 0 0 50px" });
             tt = 0;
         }
     }
@@ -317,60 +363,60 @@
 
 
     function green() {
-        $("#switcher>.mainarrow").css({background: "#00c853"});
-        $("#switcher>.mainarrow>.top").css({background: "#00c853"});
-        $("#switcher>.mainarrow>.down").css({background: "#00c853"});
+        $("#switcher>.mainarrow").css({ background: "#00c853" });
+        $("#switcher>.mainarrow>.top").css({ background: "#00c853" });
+        $("#switcher>.mainarrow>.down").css({ background: "#00c853" });
         $("#grid>#sixitem").removeClass().addClass("green");
         $("#grid>#detailview").removeClass().addClass("green");
         $("#nav").removeClass().addClass("green");
-        $("#fixing>.menu").removeClass().addClass("menu").addClass("green");
-        $("#all").removeClass().addClass("green").addClass(caca);
+        $("#fixing>.menu").removeClass().addClass("menu green");
+        $("#all").removeClass().addClass("green " + caca);
 
     }
 
     function yellow() {
-        $("#switcher>.mainarrow").css({background: "#FFA726"});
-        $("#switcher>.mainarrow>.top").css({background: "#FFA726"});
-        $("#switcher>.mainarrow>.down").css({background: "#FFA726"});
+        $("#switcher>.mainarrow").css({ background: "#FFA726" });
+        $("#switcher>.mainarrow>.top").css({ background: "#FFA726" });
+        $("#switcher>.mainarrow>.down").css({ background: "#FFA726" });
         $("#grid>#sixitem").removeClass().addClass("yellow");
         $("#grid>#detailview").removeClass().addClass("yellow");
         $("#nav").removeClass().addClass("yellow");
-        $(".fix>.menu").removeClass().addClass("menu").addClass("yellow");
-        $("#all").removeClass().addClass("yellow").addClass(caca);
+        $(".fix>.menu").removeClass().addClass("menu yellow");
+        $("#all").removeClass().addClass("yellow " + caca);
     }
 
     function purple() {
-        $("#switcher>.mainarrow").css({background: "#AB47AC"});
-        $("#switcher>.mainarrow>.top").css({background: "#AB47AC"});
-        $("#switcher>.mainarrow>.down").css({background: "#AB47AC"});
+        $("#switcher>.mainarrow").css({ background: "#AB47AC" });
+        $("#switcher>.mainarrow>.top").css({ background: "#AB47AC" });
+        $("#switcher>.mainarrow>.down").css({ background: "#AB47AC" });
         $("#grid>#sixitem").removeClass().addClass("purple");
         $("#grid>#detailview").removeClass().addClass("purple");
         $("#nav").removeClass().addClass("purple");
-        $(".fix>.menu").removeClass().addClass("menu").addClass("purple");
-        $("#all").removeClass().addClass("purple").addClass(caca);
+        $(".fix>.menu").removeClass().addClass("menu purple");
+        $("#all").removeClass().addClass("purple " + caca);
 
     }
 
     function pink() {
-        $("#switcher>.mainarrow").css({background: "#EC407A"});
-        $("#switcher>.mainarrow>.top").css({background: "#EC407A"});
-        $("#switcher>.mainarrow>.down").css({background: "#EC407A"});
+        $("#switcher>.mainarrow").css({ background: "#EC407A" });
+        $("#switcher>.mainarrow>.top").css({ background: "#EC407A" });
+        $("#switcher>.mainarrow>.down").css({ background: "#EC407A" });
         $("#grid>#sixitem").removeClass().addClass("pink");
         $("#grid>#detailview").removeClass().addClass("pink");
         $("#nav").removeClass().addClass("pink");
-        $(".fix>.menu").removeClass().addClass("menu").addClass("pink");
-        $("#all").removeClass().addClass("pink").addClass(caca);
+        $(".fix>.menu").removeClass().addClass("menu pink");
+        $("#all").removeClass().addClass("pink " + caca);
     }
 
     function blue() {
-        $("#switcher>.mainarrow").css({background: "#448AFF"});
-        $("#switcher>.mainarrow>.top").css({background: "#448AFF"});
-        $("#switcher>.mainarrow>.down").css({background: "#448AFF"});
+        $("#switcher>.mainarrow").css({ background: "#448AFF" });
+        $("#switcher>.mainarrow>.top").css({ background: "#448AFF" });
+        $("#switcher>.mainarrow>.down").css({ background: "#448AFF" });
         $("#grid>#sixitem").removeClass().addClass("blue");
         $("#grid>#detailview").removeClass().addClass("blue");
         $("#nav").removeClass().addClass("blue");
-        $(".fix>.menu").removeClass().addClass("menu").addClass("blue");
-        $("#all").removeClass().addClass("blue").addClass(caca);
+        $(".fix>.menu").removeClass().addClass("menu blue");
+        $("#all").removeClass().addClass("blue " + caca);
 
     }
 </script>

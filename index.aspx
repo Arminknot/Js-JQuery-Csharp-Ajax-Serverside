@@ -52,22 +52,16 @@
             ////call for right tab click function========================
             $("#nav").on("click", ".right", function () {
                 sis = $("#nav>.set").html();
-
                 if (num > sis) {
-
                     nexttab(sis);
-
                 }
             });
 
             ////call for left tab click function========================
             $("#nav").on("click", ".left", function () {
                 kiss = $("#nav>.set").html();
-
                 if (1 < kiss) {
-
                     prevtab(kiss);
-
                 }
             });
 

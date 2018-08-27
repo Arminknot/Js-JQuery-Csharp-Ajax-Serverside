@@ -22,7 +22,8 @@ body {
     transition: 0.3s;
     padding: 0 0 0 50px;
     margin: 0;
-    background: rgb(214, 214, 214);
+    background: url('../pic/emi2.jpg') rgb(213, 213, 213) no-repeat 90px 0%;
+    background-attachment: fixed;
 }
 
 /*==========================scroll css=============================*/
@@ -570,7 +571,7 @@ body {
 
 /*=======================================================*/
 #nav {
-    margin: 150px auto 10px;
+    margin: 150px auto 10px 150px;
     padding: 0;
     list-style: none;
     height: 30px;
@@ -728,7 +729,7 @@ body {
 /*main music box=====================================*/
 
 #all {
-    margin: 0 auto 50px;
+    margin: 0 auto 50px 150px;
     width: 1320px;
     padding: 10px;
     background: #333;
@@ -739,219 +740,310 @@ body {
 
     /*===================items and childrens====================================*/
 
-    #all.green > .items:hover {
-        background: #00c853;
-    }
-
-    #all.yellow > .items:hover {
-        background: #FFA726;
-    }
-
-    #all.purple > .items:hover {
-        background: #AB47AC;
-    }
-
-    #all.pink > .items:hover {
-        background: #EC407A;
-    }
-
-    #all.blue > .items:hover {
-        background: #448AFF;
-    }
-
-    #all.green.view2 > .items:hover {
-        background: #00c853;
-    }
-
-    #all.yellow.view2 > .items:hover {
-        background: #FFA726;
-    }
-
-    #all.purple.view2 > .items:hover {
-        background: #AB47AC;
-    }
-
-    #all.pink.view2 > .items:hover {
-        background: #EC407A;
-    }
-
-    #all.blue.view2 > .items:hover {
-        background: #448AFF;
-    }
-
-    #all > .items:hover {
-        transition: 0.3s;
-        cursor: pointer;
-        background: #448AFF;
-        transform: translateY(-15px);
-    }
-
-    #all > .items {
-        transition: 0.3s;
-        overflow: hidden;
+    #all > .loader {
         width: 200px;
-        background: rgb(214, 214, 214);
-        margin: 10px;
-        padding: 4px 0 10px 0;
-        float: left;
-        position: relative;
+        height: 200px;
+        margin: 80px auto;
+        background: url("../pic/01.svg") no-repeat;
+        background-size: 200px;
+        display: none;
     }
 
-        #all > .items > .detail {
-            transition: 0;
-            overflow: hidden;
-            width: 0;
-            height: 0;
-            padding: 5px 10px;
-        }
-
-        #all > .items:hover > .detail > .deshead {
-            transition: 0.3s;
-            color: white;
-        }
-
-        #all > .items > .detail > .deshead {
-            transition: 0.3s;
-            height: 30px;
-            font-family: 'sanr';
-            font-size: 20px;
-            border-bottom: 1px solid #aaa;
-            margin-top: 30px;
-        }
-
-        #all > .items:hover > .detail > .note {
-            transition: 0.3s;
-            color: white;
-        }
-
-        #all > .items > .detail > .note {
-            transition: 0.3s;
-            height: 240px;
-            font-family: 'sanr';
-            font-size: 15px;
-            margin-top: 10px;
-        }
-
-        #all > .items:hover > .language {
-            transition: 0.3s;
-            transform: rotate(-45deg) translateY(-60px);
-        }
-
-        #all > .items > .language {
-            text-align: center;
-            transition: 0.3s;
-            position: absolute;
-            height: 100px;
-            width: 100px;
-            top: -51px;
-            left: -51px;
-            background: rgba(30, 30, 30, 0.715);
-            z-index: 100;
-            font-family: 'sanr', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 170px;
-            font-size: 20px;
-            font-weight: bold;
-            color: #fff;
-            transform: rotate(-45deg) translateY(-9px);
-            box-shadow: 0 0 10px 5px #000;
-        }
-
-        #all > .items:hover > img {
-            transition: 0.3s;
-            border-radius: 0;
-        }
-
-        #all > .items > img {
-            display: inline-block;
-            margin: -10px 0 0 4px;
-            transition: 0.3s;
-            width: 190px;
-            height: 190px;
-            border: 1px solid rgba(255, 255, 255, 0);
-            border-radius: 50%;
-        }
-
-        #all > .items > h2 {
-            height: 28px;
-            background: red;
-            color: #fff;
-            font-family: sanb;
-            font-size: 21px;
-            margin: 5px auto 5px;
-            line-height: 26px;
-            font-weight: normal;
-            text-align: center;
-        }
-
-        #all > .items:hover > a {
-            /*color: white;*/
-            transition: 0.3s;
-        }
-
-        #all > .items > a {
-            text-align: center;
-            display: inline-block;
-            width: 200px;
-            margin-top: 5px;
-            transition: 0.3s;
-            text-decoration: none;
-            font-family: sanb;
-            font-size: 16px;
-            color: black;
-        }
-
-        #all > .items:hover > .price {
-            /*color: black;*/
-            transition: 0.3s;
-        }
-
-        #all > .items > .price {
-            transition: 0.3s;
-            display: inline-block;
-            height: 25px;
-            font-size: 16px;
-            margin-top: 5px;
-        }
-
-        #all > .items > .star {
-            background: url('../pic/star.png') repeat-x;
-            background-size: 25px;
-            margin: 5px auto;
-            height: 25px;
+        #all > .loader.show {
+            display: block;
         }
 
 
-    /*=======================second view========================================*/
 
-    #all.view2 > .items {
-        transition: 0;
-        width: 420px;
+#all.green > .items:hover {
+    background: #00c853;
+}
+
+#all.yellow > .items:hover {
+    background: #FFA726;
+}
+
+#all.purple > .items:hover {
+    background: #AB47AC;
+}
+
+#all.pink > .items:hover {
+    background: #EC407A;
+}
+
+#all.blue > .items:hover {
+    background: #448AFF;
+}
+
+#all.green.view2 > .items:hover {
+    background: #00c853;
+}
+
+#all.yellow.view2 > .items:hover {
+    background: #FFA726;
+}
+
+#all.purple.view2 > .items:hover {
+    background: #AB47AC;
+}
+
+#all.pink.view2 > .items:hover {
+    background: #EC407A;
+}
+
+#all.blue.view2 > .items:hover {
+    background: #448AFF;
+}
+
+#all > .items:hover {
+    transition: 0.3s;
+    cursor: pointer;
+    background: #448AFF;
+    transform: translateY(-15px);
+}
+
+#all > .items {
+    transition: 0.3s;
+    overflow: hidden;
+    width: 200px;
+    background: rgb(214, 214, 214);
+    margin: 10px;
+    padding: 4px 0 10px 0;
+    float: left;
+    position: relative;
+}
+
+    #all > .items.show {
+        animation: anim 0.5s;
     }
 
-        #all.view2 > .items > .detail {
-            transition: 0.3s;
-            width: 45%;
-            height: 310px;
-            float: right;
-        }
 
-        #all.view2 > .items > img {
-            display: inline-block;
-            margin: 0px 0 0 4px;
-        }
+@keyframes anim {
+    0% {
+        opacity: 0;
+        transform: scale(0) translateY(-1000px) translateX(0);
+    }
 
-        #all.view2 > .items > h2 {
-            width: 190px;
-            margin: 5px 0 5px 4px;
-            text-align: center;
-        }
+    10% {
+        opacity: 0.1;
+        transform: scale(0.1)translateY(-900px);
+    }
 
-        #all.view2 > .items > a {
-            margin: 5px 0 0 4px;
-            width: 195px;
-            text-align: center;
-        }
+    20% {
+        opacity: 0.2;
+        transform: scale(0.2)translateY(-800px);
+    }
 
-        #all.view2 > .items > .star {
-            margin: 26px auto 0 auto;
-        }
+    30% {
+        opacity: 0.3;
+        transform: scale(0.3)translateY(-700px);
+    }
+
+    40% {
+        opacity: 0.4;
+        transform: scale(0.4) translateY(-600px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.5)translateY(-500px);
+    }
+
+    60% {
+        opacity: 0.6;
+        transform: scale(0.6) translateY(-400px);
+    }
+
+    70% {
+        opacity: 0.7;
+        transform: scale(0.7)translateY(-300px);
+    }
+
+    80% {
+        opacity: 0.8;
+        transform: scale(0.8) translateY(-200px);
+    }
+
+    90% {
+        opacity: 0.9;
+        transform: scale(0.9)translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0px);
+    }
+}
+
+
+#all > .items > .detail {
+    transition: 0;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    padding: 5px 10px;
+}
+
+#all > .items:hover > .detail > .deshead {
+    transition: 0.3s;
+    color: white;
+}
+
+#all > .items > .detail > .deshead {
+    transition: 0.3s;
+    height: 30px;
+    font-family: 'sanr';
+    font-size: 20px;
+    border-bottom: 1px solid #aaa;
+    margin-top: 30px;
+}
+
+#all > .items:hover > .detail > .note {
+    transition: 0.3s;
+    color: white;
+}
+
+#all > .items > .detail > .note {
+    transition: 0.3s;
+    height: 240px;
+    font-family: 'sanr';
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+#all > .items:hover > .language {
+    transition: 0.3s;
+    transform: rotate(-45deg) translateY(-60px);
+}
+
+#all > .items > .language {
+    text-align: center;
+    transition: 0.3s;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: -51px;
+    left: -51px;
+    background: rgba(30, 30, 30, 0.715);
+    z-index: 100;
+    font-family: 'sanr', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 170px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    transform: rotate(-45deg) translateY(-9px);
+    box-shadow: 0 0 10px 5px #000;
+}
+
+#all > .items:hover > img {
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+#all > .items > img {
+    display: inline-block;
+    margin: -10px 0 0 4px;
+    transition: 0.3s;
+    width: 190px;
+    height: 190px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 50%;
+}
+
+#all > .items > h2 {
+    height: 28px;
+    background: red;
+    color: #fff;
+    font-family: sanb;
+    font-size: 21px;
+    margin: 5px auto 5px;
+    line-height: 26px;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+#all > .items:hover > a {
+    /*color: white;*/
+    transition: 0.3s;
+}
+
+#all > .items > a {
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+    margin-top: 5px;
+    transition: 0.3s;
+    text-decoration: none;
+    font-family: sanb;
+    font-size: 16px;
+    color: black;
+}
+
+#all > .items:hover > .price {
+    /*color: black;*/
+    transition: 0.3s;
+}
+
+#all > .items > .price {
+    transition: 0.3s;
+    display: inline-block;
+    height: 25px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+#all > .items > .star {
+    background: url('../pic/star.png') repeat-x;
+    background-size: 25px;
+    margin: 5px auto;
+    height: 25px;
+}
+
+
+/*=======================second view========================================*/
+
+#all.view2 > .items {
+    transition: 0;
+    width: 420px;
+}
+
+    #all.view2 > .items > .detail {
+        transition: 0.3s;
+        width: 45%;
+        height: 310px;
+        float: right;
+    }
+
+    #all.view2 > .items > img {
+        display: inline-block;
+        margin: 0px 0 0 4px;
+    }
+
+    #all.view2 > .items > h2 {
+        width: 190px;
+        margin: 5px 0 5px 4px;
+        text-align: center;
+    }
+
+    #all.view2 > .items > a {
+        margin: 5px 0 0 4px;
+        width: 195px;
+        text-align: center;
+    }
+
+    #all.view2 > .items > .star {
+        margin: 26px auto 0 auto;
+    }
+
+
+.slim {
+    position: fixed;
+    top: 790px;
+    left: 1600px;
+    height: 70px;
+    width: 250px;
+    font-family: Mostwasted;
+    font-size: 50px;
+    z-index: -10;
+}

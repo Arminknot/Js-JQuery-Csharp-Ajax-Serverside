@@ -7,7 +7,7 @@
 <head>
 
     <title>Music Revolution</title>
-
+    
     <link href="style/base.css" rel="stylesheet" />
 
     <script src="script/jquery.js"></script>
@@ -29,7 +29,7 @@
                 itemnumber = $("#select>option:selected").html();
                 createtab(itemnumber);
 
-                fill_items(0, itemnumber); //change item according to select view
+                fill_items(0,itemnumber); //change item according to select view
             })
 
 
@@ -45,6 +45,9 @@
                 itemnumber = $("#select>option:selected").html();
 
                 start = (page - 1) * itemnumber;
+
+
+
                 fill_items(start, itemnumber);
             });
 
@@ -148,37 +151,46 @@
                 success: function (response) {
                     fo = response.d;
 
-                    $("#all").empty();
+                    $("#all>div").remove();
 
-                    for (i = 0; i < fo.length; i++) {
+                     //loadingtimeout
+                    $("#all>div").remove();
+                    $("#all>.loader").addClass("show").delay(1000).queue(function () {
+                        $(this).removeClass("show").dequeue();
+                    });
 
-                        it = $("<div>").addClass("items");
-                        des = $("<div>").addClass("detail");
-                        head = $("<div>").addClass("deshead").html("Description:");
-                        note = $("<div>").addClass("note").html(fo[i].review);
-                        nam = $("<div>").addClass("language").html("jQ").css({
-                            background: "brown"
-                        });
-                        im = $("<img>").attr({
-                            src: "pic/" + fo[i].pic
-                        });
-                        h = $("<h2>").html(fo[i].artist);
-                        anc = $("<a>").html("Album: " + fo[i].album);
-                        pipi = $("<a>").addClass("price").html("Price: " + fo[i].price);
-                        st = $("<div>").addClass("star").css({
-                            width: (25 * fo[i].rate) - 2 + "px"
-                        });
-
-                        it.append(des).append(nam).append(im).append(h).append(anc).append(pipi).append(st);
-                        des.append(head).append(note);
-
-                        $("#all").append(it);
-                    }
+                    setTimeout("halqe()", 1000);
+                    
 
                 },
                 error: function () { }
 
             });
+        }
+
+        function halqe() {
+            for (i = 0; i < fo.length; i++) {
+
+                        setTimeout("builditems(" + i + ")", i * 50);
+                    }
+        }
+
+        function builditems(i) {
+            it = $("<div>").addClass("items show");
+            des = $("<div>").addClass("detail");
+            head = $("<div>").addClass("deshead").html("Description:");
+            note = $("<div>").addClass("note").html(fo[i].review);
+            nam = $("<div>").addClass("language").html("JQ").css({ background: "orangered" });
+            im = $("<img>").attr({ src: "pic/" + fo[i].pic });
+            h = $("<h2>").html(fo[i].artist);
+            anc = $("<a>").html("Album: " + fo[i].album);
+            pipi = $("<a>").addClass("price").html("Price: " + fo[i].price);
+            st = $("<div>").addClass("star").css({ width: (25 * fo[i].rate) - 2 + "px" });
+
+            it.append(des).append(nam).append(im).append(h).append(anc).append(pipi).append(st);
+            des.append(head).append(note);
+
+            $("#all").append(it);
         }
     </script>
 
@@ -293,7 +305,11 @@
     <!--Main Music Box ====================!!!!!!!!!!!!!!!!!!!!!!!!!!!!--------->
     <div id="all" runat="server">
         <!--including items and elements made in jQuery above -->
+
+        <h2 class="loader"></h2>
+
     </div>
+
 
 
 

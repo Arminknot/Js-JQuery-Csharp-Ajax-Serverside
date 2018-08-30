@@ -154,12 +154,12 @@
                     $("#all>div").remove();
 
                      //loadingtimeout
-                    $("#all>div").remove();
-                    $("#all>.loader").addClass("show").delay(1000).queue(function () {
+
+                    $("#all>.loader").addClass("show").delay(400).queue(function () {
                         $(this).removeClass("show").dequeue();
                     });
 
-                    setTimeout("halqe()", 1000);
+                    setTimeout("halqe()", 400);
                     
 
                 },
@@ -171,7 +171,7 @@
         function halqe() {
             for (i = 0; i < fo.length; i++) {
 
-                        setTimeout("builditems(" + i + ")", i * 50);
+                        setTimeout("builditems(" + i + ")",0);
                     }
         }
 
